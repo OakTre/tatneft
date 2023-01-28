@@ -1,0 +1,33 @@
+.projects-page {
+  &__filter {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: var(--grid-offset);
+    margin-bottom: 6.4rem;
+
+    @include mq(md) {
+      display: block;
+      margin-bottom: 4rem;
+    }
+
+    &-item {
+      grid-column: 5 span;
+
+      @include mq(xl) {
+        grid-column: 6 span;
+      }
+
+      @include mq(md) {
+        margin-bottom: 1.6rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @include mq(sm) {
+        margin-bottom: 0.8rem;
+      }
+    }
+  }
+}

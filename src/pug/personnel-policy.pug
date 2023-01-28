@@ -1,0 +1,12 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Кадровая политика"
+  - const siteLang = "ru"
+  - callBacSubkHeading = "Не нашли подходящую вакансию?"
+  - callBackHeading = "Отправьте свое резюме"
+  - callBackVacansy = true
+
+block content
+  include pages/personnel-policy/main.pug

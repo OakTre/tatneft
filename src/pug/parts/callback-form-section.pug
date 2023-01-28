@@ -1,0 +1,56 @@
+//- переменные
+//- callBacSubkHeading и callBackHeading callBackEmail
+//- создаются в корне файла пример pug/index.pug
+
+section.page-section.callback-section
+  .site-container
+    .callback-section__grid
+      .callback-section__block
+
+        include logoAnimated.pug
+
+        a.callback-section__legend.callback-section__legend--mb.page-hover-effect(href="tel:+78002505999") 8-800-250-59-99
+        a.callback-section__legend.page-hover-effect(href="mailto:sales@tnpc.ru") sales@tnpc.ru
+
+        p.callback-section__caption
+          | 423600, Республика Татарстан Район Елабужский, улица 22.1, корпус 48/3
+      .callback-section__block
+        .vertical-line
+      .callback-section__block
+        .callback-section__legend.callback-section__legend--mb= callBacSubkHeading
+        h2.callback-section__heading= callBackHeading
+
+        if callBackVacansy
+          form.callback-section__form(action="/" enctype="multipart/form-data" data-need-validation)
+            .callback-section__form-grid
+              label.input-label.js-validation-wrapper.callback-section__form-grid-input
+                input(type="text" class="input" name="name" data-parsley-required data-parsley-fio placeholder="Имя")
+              label.input-label.js-validation-wrapper.callback-section__form-grid-input
+                input(type="text" class="input js-phone-mask" name="name" data-parsley-required data-parsley-phone placeholder="+7 (900) 000 00 00")
+              label.input-file.callback-section__form-grid-input--full.js-file-upload
+                input(type="file" class="visually-hidden" name="file")
+                span.input-file__text.js-file-upload-text(data-text="Прикрепить резюме") Прикрепить резюме
+                +icon-mono("clip")(class="input-file__icon" width="16" height="16")
+            button.button.callback-section__form-grid-btn
+              | Отправить
+            .callback-section__form-agreement
+              | Нажимая кнопку «Отправить» вы соглашаетесь на обработку #[a(href="/") персональных данных]
+
+        else
+          form.callback-section__form(action="/" data-need-validation)
+            if callBackEmail
+              p.callback-section__email-text
+                | Отправьте свою электронную почту и получите доступ к нашим последним материалам пресс-центра самыми первыми
+            .callback-section__form-row
+              if callBackEmail
+                label.input-label.js-validation-wrapper.callback-section__form-input.callback-section__form-input--big
+                  input(type="text" class="input" name="email" data-parsley-required data-parsley-email placeholder="example@mail.ru")
+              else
+                label.input-label.js-validation-wrapper.callback-section__form-input
+                  input(type="text" class="input" name="name" data-parsley-required data-parsley-fio placeholder="Имя")
+                label.input-label.js-validation-wrapper.callback-section__form-input
+                  input(type="text" class="input js-phone-mask" name="name" data-parsley-required data-parsley-phone placeholder="+7 (900) 000 00 00")
+              button.button
+                | Отправить
+            .callback-section__form-agreement
+              | Нажимая кнопку «Отправить» вы соглашаетесь на обработку #[a(href="/") персональных данных]

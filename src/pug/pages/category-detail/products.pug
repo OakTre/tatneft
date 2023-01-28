@@ -1,0 +1,15 @@
+-
+  cat_list1 = [
+    "Двутавр", "Полоса", "Полоса отбойная", "Поручень", "Труба гофрированная",
+    "Труба квадратная", "Труба круглая", "Труба прямоугольная", "Уголок",
+    "Швеллер", "Нестандартный профиль"
+  ]
+
+section.page-section
+  .site-container
+    ul.categories-detail-items
+      for item, index in cat_list1
+        li.categories-detail-items__block
+          .category-card
+            +pictureLazy(`products-details/img${index}.png`)(class="category-card__img")
+            a.category-card__legend(href="./product-page.html")= item

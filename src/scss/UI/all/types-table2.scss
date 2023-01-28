@@ -1,0 +1,51 @@
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-class-pattern */
+.types-table2 {
+  &__body {
+    color: var(--color-base01);
+
+    .types-table2__row {
+      &:last-child {
+        .types-table2__cell {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &__row-head {
+    .types-table2__cell {
+      padding-top: 0;
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid var(--color-base06);
+
+      @include mq(sm) {
+        padding-bottom: 1.2rem;
+      }
+    }
+  }
+
+  &__cell {
+    padding: 2.4rem 0;
+    padding-right: 4rem;
+    white-space: nowrap;
+    text-align: left;
+    border-bottom: 1px solid var(--color-base06);
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include mq(sm) {
+      padding: 1.2rem 0;
+      padding-right: 1.6rem;
+    }
+  }
+
+  &__wrapper {
+    max-width: 94.6rem;
+    overflow-x: auto;
+
+    @include customScrollbar();
+  }
+}

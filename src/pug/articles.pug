@@ -1,0 +1,10 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Пресс-центр"
+  - const siteLang = "ru"
+  - pageName = "Статьи"
+
+block content
+  include pages/press-centre-pages/articles/main.pug

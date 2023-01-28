@@ -1,0 +1,33 @@
+.contacts {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: var(--grid-offset);
+
+    &-block {
+      grid-column: 12 span;
+
+      @include mq(md) {
+        &:nth-child(1) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+
+    @include mq(md) {
+      display: block;
+    }
+  }
+
+  &__departments {
+    margin-top: 14rem;
+
+    @include mq(sm) {
+      margin-top: 6.4rem;
+    }
+  }
+
+  &__loader {
+    display: none;
+  }
+}

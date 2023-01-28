@@ -1,0 +1,132 @@
+/* stylelint-disable selector-class-pattern */
+.catalogue {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 18.4rem;
+  padding: 2.4rem;
+  background-color: var(--color-base06);
+  background-image: url("../images/bg-mask.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  border-radius: 1.6rem;
+
+  &__img {
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    width: 12rem;
+    height: 12rem;
+    object-fit: contain;
+
+    @include mq(sm) {
+      top: auto;
+      right: 1.6rem;
+      bottom: 1.6rem;
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+
+  &__name {
+    max-width: 18.8rem;
+    color: var(--color-base01);
+    font: var(--font-text-t4-light-ln100);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+    }
+  }
+
+  &__file-size {
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    color: var(--color-base01);
+    text-transform: uppercase;
+
+    &--doc {
+      &::before {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 0.8rem;
+        background-image: url("../images/doc.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+      }
+    }
+
+    &--pdf {
+      &::before {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 0.8rem;
+        background-image: url("../images/pdf.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+      }
+    }
+  }
+
+  &__text {
+    font: var(--font-text-t3-light-ln125);
+  }
+
+  &:hover {
+    .catalogue__file-size {
+      color: var(--color-base03);
+    }
+  }
+
+  @include mq(sm) {
+    padding: 1.6rem;
+    border-radius: 1.2rem;
+  }
+
+  &--big {
+    min-height: 36rem;
+    padding: 4rem;
+
+    .catalogue__name {
+      max-width: none;
+      margin-bottom: 1.2rem;
+      font: var(--font-once);
+    }
+
+    @include mq(md) {
+      padding: 2.4rem;
+    }
+
+    @include mq(sm) {
+      min-height: 0;
+      padding: 1.6rem;
+    }
+  }
+
+  &--small {
+    max-width: 29.6rem;
+    height: 10.2rem;
+    padding: 1.8rem;
+    border-radius: 1.2rem;
+
+    .catalogue__img {
+      top: 1.8rem;
+      right: 1.8rem;
+      width: 4.8rem;
+      height: 6.6rem;
+      border-radius: 0.4rem;
+    }
+  }
+}

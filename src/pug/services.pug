@@ -1,0 +1,11 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Услуги"
+  - const siteLang = "ru"
+  - callBacSubkHeading = "Проконсультируем "
+  - callBackHeading = "по любому вопросу"
+
+block content
+  include pages/services/main.pug

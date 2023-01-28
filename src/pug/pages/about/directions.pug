@@ -1,0 +1,82 @@
+-
+  direct_list = [
+    { name: "Композитные трубы", slug: "trubi" },
+    { name: "Композитные профили и кабеленесущие лотки", slug: "profili" },
+    { name: "Композитные компаунды", slug: "comp" },
+    { name: "SMC", slug: "SMC" },
+    { name: "ВМС", slug: "ВМС" }
+  ]
+
+section.page-section.js-tab-parent
+  .site-content-container
+    h2.page-h1-heading.about-derections__heading
+      | Направления
+    .about-derections__nav-list
+      for item, index in direct_list
+        - activeClass = index === 0 ? 'is-active' : ''
+        button.about-derections__nav-btn.page-tab-btn.page-tab-btn--small.js-tabs-nav(class=activeClass data-tab-parent=item.slug)= item.name
+
+    .custom-select.custom-select--transparent.js-custom-select.about-derections__mobile-select
+      button.custom-select__heading-select.js-custom-select-name
+        .custom-select__heading(arial-label="Открыть селект")
+          | Композитные трубы
+      ul.custom-select__body.js-custom-select-body
+        for item, index in direct_list
+          - activeClass = index === 0 ? 'is-active' : ''
+          li.custom-select__item
+            button.custom-select__choose.js-custom-select-choise.js-tabs-nav(class=activeClass data-tab-parent=item.slug)
+              span.custom-select__choose-label= item.name
+
+
+  .site-container
+    for item, index in direct_list
+      - activeClass = index === 0 ? 'is-active' : ''
+      .page-tab-content.js-tabs-content(class=activeClass data-tab-child=item.slug)
+        .about-derections__container
+          .about-derections__grid-container
+            .about-derections__grid-container-block
+              .about-derections__info
+                h3= item.name
+                p
+                  | Производим более 40 наименований стеклопластиковых профилей строительного назначения различного поперечного сечения, длины и расцветки.
+
+              ul.about-derections__info-list
+                li.about-derections__info-item
+                  .about-derections__info-legend
+                    | 5 линий
+                  .about-derections__info-legend-small
+                    | Количество линий
+
+                li.about-derections__info-item
+                  .about-derections__info-legend
+                    | 1000 км/год
+                  .about-derections__info-legend-small
+                    | Проектная мощность
+
+            .about-derections__grid-container-block
+              .about-derections__legend
+                | Технология
+              .about-derections__legend-text
+                p
+                  | Пултрузия — непрерывный технологический процесс
+                  | получения профилей путем протяжки через нагретую
+                  | формообразующую фильеру стекломатериалов,
+                  | пропитанных термореактивной смолой.
+                p
+                  | На выходе получается полностью сформированный
+                  | профиль заданной конфигурации.
+
+              img(src="assets/images/dir-img.jpg" class="about-derections__image" alt="")
+
+              ul.about-derections__info-list.about-derections__info-list--mobile
+                li.about-derections__info-item
+                  .about-derections__info-legend
+                    | 5 линий
+                  .about-derections__info-legend-small
+                    | Количество линий
+
+                li.about-derections__info-item
+                  .about-derections__info-legend
+                    | 1000 км/год
+                  .about-derections__info-legend-small
+                    | Проектная мощность

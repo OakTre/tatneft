@@ -1,0 +1,14 @@
+.categories-detail-items {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: var(--grid-offset);
+
+  @include mq(md) {
+    grid-template-columns: repeat(16, 1fr);
+    gap: 0.8rem;
+  }
+
+  &__block {
+    grid-column: 8 span;
+  }
+}

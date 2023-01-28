@@ -1,0 +1,28 @@
+/* stylelint-disable no-descending-specificity */
+.loader-active {
+  .preloader {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999999999999;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-base09);
+  transition: all 400ms;
+
+  // &.is-set {
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
+
+  &.is-loaded {
+    visibility: hidden;
+    opacity: 0;
+  }
+}

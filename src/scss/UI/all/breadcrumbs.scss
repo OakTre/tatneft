@@ -1,0 +1,40 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  color: var(--color-base01-alfa30);
+  font: var(--font-common-label2);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  &__container {
+    margin-top: 1.6rem;
+    margin-bottom: 5.3rem;
+
+    @include mq(sm) {
+      margin: 0;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__arrow {
+    flex-shrink: 0;
+    margin: 0 0.4rem;
+  }
+
+  @include mq(lg) {
+    margin-right: calc(-1 * var(--content-padding2));
+    padding-right: var(--content-padding2);
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    @include noScrollbar();
+  }
+
+  @include mq(sm) {
+    padding-top: 2.4rem;
+    padding-bottom: 2.1rem;
+  }
+}

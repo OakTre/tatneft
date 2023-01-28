@@ -1,0 +1,11 @@
+/* stylelint-disable selector-class-pattern */
+.loco-scroll-active .smooth-scroll {
+  position: fixed;
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.c-scrollbar_thumb {
+  background-color: var(--color-base01);
+  opacity: 0.4;
+}

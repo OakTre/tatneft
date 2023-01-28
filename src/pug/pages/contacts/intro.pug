@@ -1,0 +1,27 @@
+-
+  contact_list = [
+    "Головной офис",
+    "Завод в елабуге",
+    "Завод в бавлах",
+    "Завод в Альметьевске",
+    "Завод в другом городе"
+  ]
+
+section.page-intro
+  .site-content-container
+    h1.page-intro__heading.page-hero-heading
+      | Контакты
+    ul.page-intro__tag-list.page-intro__tag-list--grid.js-contacts-nav-btns-loader
+      li.page-intro__tag.page-intro__tag--grid
+        button.page-tab-btn.page-tab-btn--loader.page-laoder
+      li.page-intro__tag.page-intro__tag--grid
+        button.page-tab-btn.page-tab-btn--loader.page-laoder
+      li.page-intro__tag.page-intro__tag--grid
+        button.page-tab-btn.page-tab-btn--loader.page-laoder
+      li.page-intro__tag.page-intro__tag--grid
+        button.page-tab-btn.page-tab-btn--loader.page-laoder
+    ul.page-intro__tag-list.page-intro__tag-list--grid.js-contacts-nav-btns
+      //- for item, index in contact_list
+      //-   - activeClass = index === 0 ? "is-active" : ""
+      //- li.page-intro__tag.page-intro__tag--grid
+      //-   button.page-tab-btn(class=activeClass)= item

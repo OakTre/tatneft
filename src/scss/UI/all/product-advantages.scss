@@ -1,0 +1,39 @@
+.product-advantages {
+  &__item {
+    margin-bottom: 4.8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mq(lg) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__legend {
+    display: block;
+    margin-bottom: 1.2rem;
+    color: var(--color-base01);
+    font: var(--font-numbers-4);
+
+    @include mq(lg) {
+      margin-bottom: 0.8rem;
+    }
+
+    &-small {
+      color: var(--color-base04);
+      font: var(--font-text-t3-light-ln125);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    &--big {
+      font: var(--font-numbers-3);
+
+      @include mq(sm) {
+        font: var(--font-numbers-4);
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+-
+  types_list_detail = [
+    { name: "Консоль настенного кронштейна KS", img: "img2" },
+    { name: "Стойка настенного кронштейна STB", img: "img3" },
+    { name: "Боковой кронштейн KR", img: "img4" },
+    { name: "Верхний кронштейн KV", img: "img5" },
+    { name: "Верхний подвес PV", img: "img6" },
+    { name: "Консоль потолочного подвеса K", img: "img7" },
+    { name: "Консоль потолочного подвеса KD", img: "img8" },
+    { name: "Консоль усиленного потолочного подвеса KP", img: "img9" },
+    { name: "Консоль усиленного потолочного подвеса KP-D", img: "img10" },
+    { name: "Консоль настенного кронштейна KS", img: "img11" },
+    { name: "Стойка усиленного потолочного подвеса STP", img: "img12" },
+    { name: "Колонна KF", img: "img13" },
+  ]
+
+  types_list_detail2 = [
+    { name: "Серия ЗЭ (Л) (облегченные) – данное композитное крепление предназначено для фиксации одиночных одножильных и трехжильных кабелей низкого и среднего напряжения различного диаметра.", img: "imgtype2" },
+    { name: "Серия ЗЭ 1 (одножильные) - данное композитное крепление предназначено для фиксации одножильных кабелей  среднего, высокого и сверхвысокого напряжения треугольником.", img: "imgtype2" },
+    { name: "Серия ЗЭ3 (трехжильные) - данное композитное крепление предназначено для фиксации одножильных кабелей  среднего, высокого и сверхвысокого напряжения треугольником.", img: "imgtype3" }
+  ]
+
+section.page-section
+  .site-container
+    .product-types.product-types--simple
+      .product-types__grid
+        .product-types__grid-block
+          h2.product-types__legend.product-types__legend--mobile-visible Виды продукции
+          ul.product-types__detail-container
+            for item in types_list_detail
+              li.product-types__detail-item
+                .product-types-detail
+                  .product-types-detail__img-wrapper
+                    +pictureLazy(`table-types/${item.img}.jpg`)
+                  .product-types-detail__text= item.name
+
+        .product-types__grid-block
+          .catalogue.product-types__catalogue
+            +pictureLazy(`products/img0.png`)(class="catalogue__img")
+            a.catalogue__name(href="/" target="_blank")
+              | каталог «Композитные профили»
+
+            span.catalogue__file-size.catalogue__file-size--pdf
+              | pdf, 5mb
+
+          button.button.button--outline.product-types__order-btn
+            | Заказать консультацию
+
+
+
+section.page-section
+  .site-container
+    .product-types.product-types--simple
+      .product-types__grid
+        .product-types__grid-block
+          h2.product-types__legend.product-types__legend--mobile-visible Виды продукции
+          ul.product-types__detail-container.product-types__detail-container--simple
+            for item in types_list_detail2
+              li.product-types__detail-item
+                .product-types-detail.product-types-detail--big
+                  .product-types-detail__img-wrapper
+                    +pictureLazy(`table-types/${item.img}.jpg`)
+                  .product-types-detail__text= item.name
+
+        .product-types__grid-block
+          .catalogue.product-types__catalogue
+            +pictureLazy(`products/img0.png`)(class="catalogue__img")
+            a.catalogue__name(href="/" target="_blank")
+              | каталог «Композитные профили»
+
+            span.catalogue__file-size.catalogue__file-size--pdf
+              | pdf, 5mb
+
+          button.button.button--outline.product-types__order-btn
+            | Заказать консультацию

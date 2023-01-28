@@ -1,0 +1,33 @@
+.company-values {
+  &__heading-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8rem;
+
+    @include mq(lg) {
+      .page-swiper-nav {
+        display: none;
+      }
+    }
+
+    @include mq(sm) {
+      justify-content: center;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__slider {
+    .swiper-wrapper {
+      counter-reset: order;
+    }
+
+    .page-swiper-pagination {
+      display: none;
+
+      @include mq(sm) {
+        display: flex;
+      }
+    }
+  }
+}

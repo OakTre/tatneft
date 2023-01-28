@@ -1,0 +1,233 @@
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable value-no-vendor-prefix */
+.project-card {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: var(--grid-offset);
+  padding: 1.6rem;
+  overflow: hidden;
+  background-color: var(--color-base07);
+  border-radius: 1.6rem;
+  transition: background-color var(--transition);
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.8rem;
+    border-radius: 1.2rem;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transition: opacity var(--transition);
+    content: "";
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    grid-column: 12 span;
+    align-items: flex-start;
+    height: 48rem;
+
+    @include mq(custom, max, 1441) {
+      height: 42rem;
+    }
+
+    @include mq(custom, max, 993) {
+      height: 32rem;
+    }
+
+    @include mq(md) {
+      height: auto;
+    }
+
+    &:nth-child(1) {
+      padding: 3.2rem;
+
+      @include mq(custom, max, 993) {
+        padding: 1.6rem;
+      }
+
+      @include mq(md) {
+        order: 2;
+        padding: 0.8rem;
+      }
+    }
+
+    &:nth-child(2) {
+      @include mq(md) {
+        order: 1;
+      }
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__tag-item {
+    margin-bottom: 0.8rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tag {
+    display: block;
+    padding: 0.6rem 1.2rem;
+    font: var(--font-common-label1);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    border: 1px solid var(--color-base06);
+    border-radius: 99.9rem;
+
+    @include mq(md) {
+      padding: 0.5rem 0.8rem;
+      font: var(--font-common-label2);
+    }
+  }
+
+  &__heading {
+    display: -webkit-box;
+    max-width: 66.4rem;
+    margin-top: auto;
+    overflow: hidden;
+    color: var(--color-base01);
+    font: var(--font-heading-4);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    a {
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+      }
+    }
+
+    @include mq(md) {
+      max-width: 100%;
+      margin-top: 1.2rem;
+    }
+  }
+
+  picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1.6rem;
+
+    @include mq(md) {
+      height: auto;
+      margin-bottom: 1.6rem;
+      object-fit: contain;
+      border-radius: 0.8rem;
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-base08);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &--small-img {
+    display: block;
+
+    .project-card__block {
+      min-height: 48rem;
+
+      &:nth-child(2) {
+        position: absolute;
+        top: 1.6rem;
+        right: 1.6rem;
+        width: 33.2rem;
+        height: 19.9rem;
+        min-height: 0;
+
+        @include mq(lg) {
+          width: 23.2rem;
+          height: 13.9rem;
+        }
+
+        @include mq(sm) {
+          position: static;
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @include mq(lg) {
+        min-height: 38rem;
+
+        &:nth-child(1) {
+          padding: 1.2rem;
+        }
+      }
+
+      @include mq(sm) {
+        min-height: 0;
+
+        &:nth-child(1) {
+          padding: 0.8rem;
+        }
+      }
+    }
+
+    .project-card__heading {
+      max-width: 69.6rem;
+    }
+
+    @include mq(md) {
+      .project-card__heading {
+        margin-top: auto;
+      }
+    }
+
+    @include mq(sm) {
+      display: flex;
+
+      .project-card__heading {
+        margin-top: 1.2rem;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 1.6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.services-card {
+  display: block;
+  width: 100%;
+
+  &__img {
+    width: 100%;
+    height: 36rem;
+    margin-bottom: 5.6rem;
+    object-fit: cover;
+    border-radius: 1.6rem;
+
+    @include mq(sm) {
+      height: 17rem;
+      margin-bottom: 3.2rem;
+      border-radius: 1.2rem;
+    }
+  }
+
+  &__info {
+    max-width: 60.9rem;
+    padding-left: 4rem;
+
+    @include mq(sm) {
+      padding-left: 0;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.4rem;
+    color: var(--color-base01);
+    font: var(--font-heading-4);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    @include mq(sm) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__text {
+    margin-bottom: 5.6rem;
+    color: var(--color-base03);
+    font: var(--font-text-t2-light-ln145);
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+    }
+  }
+}

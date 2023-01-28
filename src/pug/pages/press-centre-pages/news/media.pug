@@ -1,0 +1,20 @@
+-
+  news_list = [
+    { name: "ООО «Татнефть-пресскомпозит» приняла активное участие в 14-й международной специализированной выставке «КОМПОЗИТ-ЭКСПО 2022»", img: "img1", link: "./media-deatail.html" },
+    { name: "Татнефть-Пресскомпозит приняла участие во 2-ой ежегодной профессиональной конференции «Горнорудная промышленность России и СНГ. Строительство и модернизация»", img: "img1", link: "./media-deatail.html" },
+    { name: "Татнефть презентовал композитную продукцию президенту Казахстана»", img: "img1", link: "./media-deatail.html" },
+    { name: "Компания «Татнефть-Пресскомпозит» приняла участие в Совещании Совета Главных энергетиков нефтеперерабатывающих и нефтехимических предприятий России и СНГ", img: "img1", link: "./media-deatail.html" },
+    { name: "Компания «Татнефть-Пресскомпозит» приняла участие в Совещании Совета Главных энергетиков нефтеперерабатывающих и нефтехимических предприятий России и СНГ", img: "img1", link: "./media-deatail.html" },
+  ]
+
+section.page-section
+  .site-container
+    ul.media
+      for item, index in news_list
+        - bigClass = index === 0 ? "media__item--big" : ""
+        - bigClassCart = index === 0 ? "news-card--big" : ""
+        li.media__item(class=bigClass)
+          +news-card(item.name, item.img, item.link)(class= bigClassCart)
+    .page-btn-center
+      button.button.button--outline
+        | Показать еще

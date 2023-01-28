@@ -1,0 +1,36 @@
+.company-chief {
+  &__image {
+    width: 12rem;
+    height: 13rem;
+    margin-bottom: 2.4rem;
+    object-fit: cover;
+    border-radius: 1.6rem;
+
+    @include mq(lg) {
+      width: 8.3rem;
+      height: 9rem;
+      margin-right: 2.4rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__legend {
+    color: var(--color-base01);
+    font: var(--font-text-t2-light-ln115);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &-small {
+      display: block;
+      max-width: 28rem;
+      margin-top: 0.6rem;
+      color: var(--color-base03);
+      font: var(--font-text-t3-light-ln125);
+    }
+  }
+
+  @include mq(lg) {
+    display: flex;
+    align-items: center;
+  }
+}

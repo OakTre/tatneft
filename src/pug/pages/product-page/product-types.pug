@@ -1,0 +1,179 @@
+section.page-section
+  .site-container
+    .product-types.js-tab-parent
+      .product-types__nav
+        button.page-tab-btn.page-tab-btn--small.js-tabs-nav.is-active(data-tab-parent="c-profil")
+          | С-профиль
+        button.page-tab-btn.page-tab-btn--small.js-tabs-nav(data-tab-parent="stupen")
+          | Ступень рифленая
+
+      .custom-select.custom-select--transparent.js-custom-select.product-types__mobile-nav
+        button.custom-select__heading-select.js-custom-select-name
+          .custom-select__heading(arial-label="Открыть селект")
+            | С-профиль
+        ul.custom-select__body.js-custom-select-body
+          li.custom-select__item
+            button.custom-select__choose.js-custom-select-choise.js-tabs-nav.is-active(data-tab-parent="c-profil")
+              span.custom-select__choose-label
+                | С-профиль
+          li.custom-select__item
+            button.custom-select__choose.js-custom-select-choise.js-tabs-nav(data-tab-parent="stupen")
+              span.custom-select__choose-label
+                | Ступень рифленая
+
+      .product-types__grid
+        .product-types__grid-block
+          .product-types__content.js-tabs-content.page-tab-content.is-active(data-tab-child="c-profil")
+            h2.product-types__legend С-профиль
+
+            .types-table__max-width-wrapper
+              table.types-table.types-table--heading
+                caption.visually-hidden Таблица типов
+                thead.types-table__head
+                  tr.types-table__row.types-table__row-head
+                    th.types-table__cell Рисунок
+                    th.types-table__cell Высота (В) мм.
+                    th.types-table__cell Ширина (А), мм.
+                    th.types-table__cell Толщина (t), мм.
+                    th.types-table__cell Вес (М), кг/м.
+              .types-table__container.types-table__container--many
+                .types-table__image
+                  +pictureLazy(`table-types/img.jpg`)(class="types-table__cell-img")
+                table.types-table
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Рисунок
+                      th.types-table__cell Высота (В) мм.
+                      th.types-table__cell Ширина (А), мм.
+                      th.types-table__cell Толщина (t), мм.
+                      th.types-table__cell Вес (М), кг/м.
+                  tbody.types-table__body
+                    each i in Array.from(Array(4).keys())
+                      tr.types-table__row
+                        td.types-table__cell
+                        td.types-table__cell 45
+                        td.types-table__cell 28
+                        td.types-table__cell 5
+                        td.types-table__cell 0,861
+              .types-table__container
+                .types-table__image
+                  +pictureLazy(`table-types/img.jpg`)(class="types-table__cell-img")
+                table.types-table
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Рисунок
+                      th.types-table__cell Высота (В) мм.
+                      th.types-table__cell Ширина (А), мм.
+                      th.types-table__cell Толщина (t), мм.
+                      th.types-table__cell Вес (М), кг/м.
+                  tbody.types-table__body
+                    tr.types-table__row
+                      td.types-table__cell
+                      td.types-table__cell 45
+                      td.types-table__cell 28
+                      td.types-table__cell 5
+                      td.types-table__cell 0,861
+              .types-table__container
+                .types-table__image
+                  +pictureLazy(`table-types/img.jpg`)(class="types-table__cell-img")
+                table.types-table
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Рисунок
+                      th.types-table__cell Высота (В) мм.
+                      th.types-table__cell Ширина (А), мм.
+                      th.types-table__cell Толщина (t), мм.
+                      th.types-table__cell Вес (М), кг/м.
+                  tbody.types-table__body
+                    tr.types-table__row
+                      td.types-table__cell
+                      td.types-table__cell 45
+                      td.types-table__cell 28
+                      td.types-table__cell 5
+                      td.types-table__cell 0,861
+          .product-types__content.js-tabs-content.page-tab-content(data-tab-child="stupen")
+            h2.product-types__legend Ступень рифленая
+
+            .types-table__max-width-wrapper
+              table.types-table.types-table--heading
+                caption.visually-hidden Таблица типов
+                thead.types-table__head
+                  tr.types-table__row.types-table__row-head
+                    th.types-table__cell Рисунок
+                    th.types-table__cell Высота (В) мм.
+                    th.types-table__cell Ширина (А), мм.
+                    th.types-table__cell Толщина (t), мм.
+                    th.types-table__cell Вес (М), кг/м.
+              .types-table__container.types-table__container--many
+                .types-table__image
+                  +pictureLazy(`table-types/img.jpg`)(class="types-table__cell-img")
+                table.types-table
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Рисунок
+                      th.types-table__cell Высота (В) мм.
+                      th.types-table__cell Ширина (А), мм.
+                      th.types-table__cell Толщина (t), мм.
+                      th.types-table__cell Вес (М), кг/м.
+                  tbody.types-table__body
+                    each i in Array.from(Array(4).keys())
+                      tr.types-table__row
+                        td.types-table__cell
+                        td.types-table__cell 45
+                        td.types-table__cell 28
+                        td.types-table__cell 5
+                        td.types-table__cell 0,861
+              .types-table__container
+                .types-table__image
+                  +pictureLazy(`table-types/img.jpg`)(class="types-table__cell-img")
+                table.types-table
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Рисунок
+                      th.types-table__cell Высота (В) мм.
+                      th.types-table__cell Ширина (А), мм.
+                      th.types-table__cell Толщина (t), мм.
+                      th.types-table__cell Вес (М), кг/м.
+                  tbody.types-table__body
+                    tr.types-table__row
+                      td.types-table__cell
+                      td.types-table__cell 45
+                      td.types-table__cell 28
+                      td.types-table__cell 5
+                      td.types-table__cell 0,861
+              .types-table__container
+                .types-table__image
+                  +pictureLazy(`table-types/img.jpg`)(class="types-table__cell-img")
+                table.types-table
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Рисунок
+                      th.types-table__cell Высота (В) мм.
+                      th.types-table__cell Ширина (А), мм.
+                      th.types-table__cell Толщина (t), мм.
+                      th.types-table__cell Вес (М), кг/м.
+                  tbody.types-table__body
+                    tr.types-table__row
+                      td.types-table__cell
+                      td.types-table__cell 45
+                      td.types-table__cell 28
+                      td.types-table__cell 5
+                      td.types-table__cell 0,861
+
+        .product-types__grid-block
+          .catalogue.product-types__catalogue
+            +pictureLazy(`products/img0.png`)(class="catalogue__img")
+            a.catalogue__name(href="/" target="_blank")
+              | каталог «Композитные профили»
+
+            span.file-size.catalogue__file-size.file-size--pdf
+              | pdf, 5mb
+
+          button.button.button--outline.product-types__order-btn
+            | Заказать консультацию

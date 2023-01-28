@@ -1,0 +1,25 @@
+section.page-section.company-values.js-slider-parent
+  .site-content-container
+    .company-values__heading-wrapper
+      h2.page-h1-heading
+        | Ценности компании
+      .page-swiper-nav
+        +nav-btn("page-circle-btn--outline js-slider-btn-prev")
+        +nav-btn("page-circle-btn--outline js-slider-btn-next")
+  .site-container
+    .company-values__slider.js-values-slider
+      ul.swiper-wrapper
+        - num = 0;
+        each i in Array.from(Array(3).keys())
+          - num++
+          li.company-values__item.swiper-slide
+            .values-card
+              img.values-card__icon(src=`assets/images/about-values/icon${num}.svg` alt="")
+              h4.values-card__heading
+                | Профессионализм и компетентность
+              p.values-card__text
+                | Профессиональный подход к своему делу
+                | и высокие требования к компетенции специалистов
+                | позволяют нам решать самые сложные технологические
+                | задачи, которые ставят перед нашей компанией.
+      .page-swiper-pagination

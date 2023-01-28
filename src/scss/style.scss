@@ -1,0 +1,167 @@
+/* stylelint-disable string-quotes */
+/* stylelint-disable custom-property-empty-line-before */
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: commissioner, sans-serif;
+  --second-ff: manrope, sans-serif;
+
+  /* colors */
+  --color-base01: #dedede;
+  --color-base01-alfa30: rgb(222 222 222/ 30%);
+  --color-base01-alfa20: rgb(222 222 222/ 20%);
+  --color-base01-alfa10: rgb(222 222 222/ 20%);
+  --color-base01-alfa05: rgb(222 222 222/ 5%);
+  --color-base03: #888;
+  --color-base04: #4f4f4f;
+  --color-base05: #2c2e32;
+  --color-base06: #1b1b1b;
+  --color-base07: #121212;
+  --color-base08: #0c0c0c;
+  --color-base08-alfa80: rgb(12 12 12/ 80%);
+  --color-base09: #080808;
+  --color-base09-alfa80: rgb(8 8 8/ 80%);
+
+  --color-primary: #eb1e3d;
+  --color-secondary: #00c277;
+
+  --color-grey-600: #99a5b0;
+  --color-grey-300: #eff1f5;
+
+  --letter-spacing: 0.03em;
+  --font-variant: 'slnt'0, 'FLAR'40, 'VOLM'0;
+
+  --font-common-b1: 300 2rem/1 var(--main-ff);
+  --font-common-b2: 300 1.3rem/1 var(--main-ff);
+  --font-common-label1: 300 1.3rem/1 var(--main-ff);
+  --font-common-label2: 300 1.1rem/1 var(--main-ff);
+  --font-common-label3: 300 0.8rem/1 var(--main-ff);
+
+  --font-note: 300 1.4rem/125% var(--main-ff);
+  --font-once: 400 1.8rem/125% var(--main-ff);
+  --font-once-2: 400 1.4rem/125% var(--main-ff);
+  --font-in-table: 300 1.3rem/100% var(--main-ff);
+
+  --font-hero: 300 8rem/102% var(--main-ff);
+  --font-numbers-1: 200 30rem/90% var(--second-ff);
+  --font-numbers-2: 200 10rem/90% var(--second-ff);
+  --font-numbers-3: 200 7.2rem/90% var(--second-ff);
+  --font-numbers-4: 200 4.2rem/90% var(--second-ff);
+  --font-numbers-5: 200 1.6rem/115% var(--second-ff);
+
+  --font-heading-1: 300 7.2rem/102% var(--main-ff);
+  --font-heading-2: 300 5.6rem/102% var(--main-ff);
+  --font-heading-3: 300 4rem/125% var(--main-ff);
+  --font-heading-4: 300 3.2rem/115% var(--main-ff);
+  --font-heading-5: 300 2.8rem/125% var(--main-ff);
+  --font-heading-5-ln145: 300 2.8rem/145% var(--main-ff);
+  --font-heading-6: 300 2.4rem/135% var(--main-ff);
+  --font-heading-6-ln115: 300 2.4rem/115% var(--main-ff);
+  --font-heading-6-ln100: 200 2.4rem/100% var(--main-ff);
+
+  --font-text-lead: 300 2.8rem/135% var(--main-ff);
+  --font-text-t1-reg: 400 1.8rem/125% var(--main-ff);
+  --font-text-t1-light-ln145: 300 1.8rem/145% var(--main-ff);
+  --font-text-t1-light-ln125: 300 1.8rem/125% var(--main-ff);
+
+  --font-text-t2-light-ln145: 300 1.6rem/145% var(--main-ff);
+  --font-text-t2-light-ln125: 300 1.6rem/125% var(--main-ff);
+  --font-text-t2-light-ln115: 300 1.6rem/115% var(--main-ff);
+
+  --font-text-t3-reg: 400 1.4rem/125% var(--main-ff);
+  --font-text-t3-light-ln125: 300 1.4rem/125% var(--main-ff);
+  --font-text-t3-light-ln100: 300 1.4rem/100% var(--main-ff);
+
+  --font-text-t4-reg: 400 1.3rem/125% var(--main-ff);
+  --font-text-t4-light-ln115: 300 1.3rem/115% var(--main-ff);
+  --font-text-t4-light-ln100: 300 1.3rem/110% var(--main-ff);
+
+  --font-over-elight: 200 2.4rem/1 var(--main-ff);
+  --font-over-light: 300 2.4rem/1 var(--main-ff);
+
+  --font-body: var(--font-text-t2-light-ln145);
+
+  /* etc */
+  --transition: 100ms ease-in;
+  --grid-offset: 16px;
+  --content-padding: 40px;
+  --content-padding2: 88px;
+  --header-height: 16rem;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/all/**/*";
+@import "./UI/controls/**/*";
+@import "./UI/parts/**/*";
+@import "./blocks/**/*";
+@import "./pages/**/*";
+
+@include mq(xl) {
+  :root {
+    --content-padding2: 40px;
+  }
+}
+
+@include mq(md) {
+  :root {
+    --content-padding: 20px;
+    --content-padding2: 20px;
+  }
+}
+
+@include mq(sm) {
+  :root {
+    --font-note: 300 1.1rem/125% var(--main-ff);
+    --font-once: 400 1.4rem/125% var(--main-ff);
+    --font-in-table: 300 0.9rem/100% var(--main-ff);
+
+    --font-numbers-2: 200 5rem/90% var(--main-ff);
+    --font-numbers-4: 200 3.2rem/90% var(--main-ff);
+
+    --font-hero: 300 2.8rem/105% var(--main-ff);
+    --font-heading-1: 300 2.4rem/105% var(--main-ff);
+    --font-heading-2: 300 2.2rem/102% var(--main-ff);
+    --font-heading-3: 300 2rem/125% var(--main-ff);
+    --font-heading-4: 300 1.8rem/115% var(--main-ff);
+    --font-heading-5: 300 1.6rem/125% var(--main-ff);
+    --font-heading-5-ln145: 300 1.6rem/125% var(--main-ff);
+    --font-heading-6: 300 1.5rem/135% var(--main-ff);
+    --font-heading-6-ln115: 300 1.5rem/135% var(--main-ff);
+    --font-heading-6-ln100: 200 1.5rem/100% var(--main-ff);
+
+    --font-text-lead: 300 1.7rem/135% var(--main-ff);
+    --font-text-t1-reg: 400 1.5rem/125% var(--main-ff);
+    --font-text-t1-light-ln145: 300 1.5rem/145% var(--main-ff);
+    --font-text-t1-light-ln125: 300 1.5rem/125% var(--main-ff);
+
+    --font-text-t2-light-ln145: 300 1.4rem/145% var(--main-ff);
+    --font-text-t2-light-ln125: 300 1.4rem/125% var(--main-ff);
+    --font-text-t2-light-ln115: 300 1.4rem/115% var(--main-ff);
+
+    --font-text-t3-reg: 400 1.3rem/125% var(--main-ff);
+    --font-text-t3-light-ln125: 300 1.3rem/125% var(--main-ff);
+    --font-text-t3-light-ln100: 300 1.3rem/100% var(--main-ff);
+
+    --font-text-t4-reg: 400 1.3rem/125% var(--main-ff);
+    --font-text-t4-light-ln115: 300 1.3rem/115% var(--main-ff);
+    --font-text-t4-light-ln100: 300 1.3rem/110% var(--main-ff);
+
+    --font-over-elight: 200 1.2rem/1 var(--main-ff);
+    --font-over-light: 300 1.2rem/1 var(--main-ff);
+
+    --font-once-2: 400 1rem/125% var(--main-ff);
+
+    --content-padding: 16px;
+    --content-padding2: 16px;
+    --header-height: 6.7rem;
+  }
+}
+
+@include mq(custom, max, 320) {
+  :root {
+    --content-padding: 16px;
+    --content-padding2: 16px;
+  }
+}

@@ -1,0 +1,294 @@
+/* stylelint-disable value-no-vendor-prefix */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable no-descending-specificity */
+.custom-select {
+  position: relative;
+
+  &--transparent {
+    .custom-select__heading-select {
+      background-color: transparent;
+    }
+  }
+
+  &__heading-select {
+    position: relative;
+    width: 100%;
+    padding: 1.7rem 5rem 1.7rem 2.4rem;
+    background-color: var(--color-base09);
+    border: 1px solid var(--color-base01-alfa20);
+    border-radius: 999.9rem;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 2.4rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url("../images/shevron-down-grey.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translateY(-50%);
+      transition: transform var(--transition);
+      content: "";
+    }
+
+    &.is-open {
+      background-color: var(--color-base09);
+      border-color: var(--color-base09);
+      border-radius: 3.2rem 3.2rem 0 0;
+
+      &::before {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &.is-choosen {
+      &::before {
+        background-image: url("../images/shevron-down.svg");
+      }
+
+      .custom-select__heading {
+        color: var(--color-base01);
+      }
+    }
+  }
+
+  &__heading {
+    display: -webkit-box;
+    max-width: calc(100% - 2rem);
+    overflow: hidden;
+    color: var(--color-base04);
+    font: var(--font-common-b2);
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-transform: uppercase;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  &__body {
+    position: absolute;
+    top: 100%;
+    z-index: 12;
+    width: 100%;
+    max-height: 17rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.8rem;
+    overflow: auto;
+    background-color: var(--color-base09);
+    border-top: 1px solid var(--color-base01-alfa20);
+    border-radius: 0 0 3.2rem 3.2rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 50ms, visibility 50ms;
+
+    @include customScrollbar();
+
+    &.is-open {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    margin-bottom: 0.4rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__choose {
+    position: relative;
+    width: 100%;
+    padding: 1.1rem 3.2rem;
+    font: var(--font-common-b2);
+    text-align: left;
+    transition: background-color var(--transition);
+
+    &:hover {
+      background-color: var(--color-base08);
+    }
+
+    &-label {
+      display: block;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 2rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url("../images/tick.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      transform: translateY(-50%);
+      opacity: 0;
+      content: "";
+    }
+
+    &.is-active {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @include mq(sm) {
+      padding-left: 2.5rem;
+    }
+  }
+}
+
+.custom-select-type1 {
+  select {
+    opacity: 0;
+  }
+
+  &.is-active {
+    .choices__list {
+      &--single {
+        color: var(--color-base01);
+      }
+    }
+
+    .choices {
+      &::after {
+        background-image: url("../images/shevron-down.svg");
+      }
+    }
+  }
+
+  .choices {
+    &::after {
+      top: 50%;
+      right: 1.6rem;
+      width: 3.2rem;
+      height: 1.6rem;
+      margin: 0 !important;
+      background-image: url("../images/shevron-down-grey.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      border: none !important;
+      transform: translateY(-50%);
+      transition: transform var(--transition);
+    }
+
+    &.is-open {
+      .choices__inner {
+        border-color: var(--color-base01-alfa20);
+        border-radius: 3.2rem 3.2rem 0 0;
+      }
+
+      &::after {
+        background-image: url("../images/shevron-down.svg");
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    &.is-flipped {
+      .choices__inner {
+        border-radius: 0 0 3.2rem 3.2rem;
+      }
+
+      .choices__list {
+        &--dropdown {
+          border-radius: 3.2rem 3.2rem 0 0;
+        }
+      }
+    }
+  }
+
+  .choices__inner {
+    display: block;
+    min-height: 0;
+    padding: 2.5rem 5.8rem 2.5rem 3.2rem !important;
+    font-size: inherit;
+    background-color: var(--color-base09);
+    border: 1px solid var(--color-base01-alfa20);
+    border-radius: 999.9rem;
+
+    @include mq(sm) {
+      padding: 1.7rem 5rem 1.7rem 2.4rem !important;
+    }
+  }
+
+  .choices__list {
+    &--single {
+      display: block;
+      padding: 0;
+      color: var(--color-base04);
+      font: var(--font-common-b2);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    &--dropdown {
+      z-index: 12;
+      overflow: hidden;
+      background-color: var(--color-base09);
+      border-color: var(--color-base01-alfa20) !important;
+      border-top: 1px solid var(--color-base01-alfa20);
+      border-radius: 0 0 3.2rem 3.2rem;
+
+      .choices__list {
+        max-height: 18.6rem;
+        margin: 0.6rem 0 0.8rem;
+
+        @include customScrollbar();
+      }
+    }
+  }
+
+  .choices__item {
+    &--choice {
+      position: relative;
+      margin-bottom: 0.4rem !important;
+      padding: 1.3rem 3.2rem !important;
+      color: var(--color-base01);
+      font: var(--font-common-b2);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      @include mq(sm) {
+        padding: 1.3rem 2.4rem !important;
+      }
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("../images/tick.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        transform: translateY(-50%);
+        opacity: 0;
+        content: "";
+      }
+
+      &.is-selected {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      &.is-highlighted {
+        background-color: var(--color-base08) !important;
+      }
+
+      &:hover {
+        background-color: var(--color-base08) !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+-
+  tag_list = [
+    { name: "Технические условия", link: "./page-docs.html" },
+    { name: "Сертификаты", link: "./page-docs.html" },
+    { name: "Руководства", link: "./page-docs.html" },
+    { name: "Спецификации", link: "./page-docs.html" }
+  ]
+
+section.page-intro
+  .site-content-container
+    h1.page-intro__heading.page-hero-heading
+      | документация
+    ul.page-intro__tag-list.page-intro__tag-list--grid
+      for item, index in tag_list
+        //- pageName и формируется в корне страницы пр. pug/news.pug
+        - activeClass = pageName === item.name ? "is-active" : ""
+        li.page-intro__tag.page-intro__tag--grid
+          button.page-tab-btn.page-intro__tag-btn(href=item.link class=activeClass)= item.name

@@ -1,0 +1,56 @@
+-
+  vid_list = [
+    "Изделия",
+    "Конструкции",
+    "Кабеленесущая система"
+  ]
+
+section.page-section
+  .site-container
+    ul.media
+      li.media__item
+        .media-card.media-card--pics(href="assets/images/media-card/img1.jpg" data-caption="Изделия" data-fancybox="izdelia")
+          .media-card__preview-image
+            +pictureLazy(`media-card/img1.jpg`)
+            .media-card__previews-group
+              a(href="assets/images/media-card/img0.jpg" data-fancybox="izdelia")
+                img(src="assets/images/media-card/img0.jpg" alt="")
+              a(href="assets/images/media-card/img4.jpg" data-fancybox="izdelia")
+                img(src="assets/images/media-card/img4.jpg" alt="")
+              a(href="assets/images/media-card/img2.jpg" data-fancybox="izdelia")
+                img(src="assets/images/media-card/img2.jpg" alt="")
+              a(href="assets/images/media-card/img3.jpg" data-fancybox="izdelia")
+                img(src="assets/images/media-card/img3.jpg" alt="")
+          .media-card__info
+            .media-card__info-text
+              | 25 фотографий
+            .media-card__name Изделия
+        li.media__item
+          .media-card.media-card--pics
+            .media-card__preview-image(href="assets/images/media-card/img1.jpg" data-caption="Конструкции" data-fancybox="konstrukcii")
+              +pictureLazy(`media-card/img1.jpg`)
+              .media-card__previews-group
+                a(href="assets/images/media-card/img5.jpg" data-fancybox="konstrukcii")
+                  img(src="assets/images/media-card/img5.jpg" alt="")
+                a(href="assets/images/media-card/img6.jpg" data-fancybox="konstrukcii")
+                  img(src="assets/images/media-card/img6.jpg" alt="")
+            .media-card__info
+              .media-card__info-text
+                | 25 фотографий
+              .media-card__name Конструкции
+        li.media__item
+          .media-card.media-card--pics
+            .media-card__preview-image(href="assets/images/media-card/img1.jpg" data-caption="Кабеленесущая система" data-fancybox="sistema")
+              +pictureLazy(`media-card/img1.jpg`)
+              .media-card__previews-group
+                a(href="assets/images/media-card/img7.jpg" data-fancybox="sistema")
+                  img(src="assets/images/media-card/img7.jpg" alt="")
+                a(href="assets/images/media-card/img8.jpg" data-fancybox="sistema")
+                  img(src="assets/images/media-card/img8.jpg" alt="")
+            .media-card__info
+              .media-card__info-text
+                | 25 фотографий
+              .media-card__name Кабеленесущая система
+    .page-btn-center
+      button.button.button--outline
+        | Показать еще

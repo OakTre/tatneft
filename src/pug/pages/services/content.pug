@@ -1,0 +1,28 @@
+section.page-section.services-content
+  .site-container
+    .services-content__container
+      .services-content__block
+        ul.services-content__list(id="test")
+          each i in Array.from(Array(3).keys())
+            li.services-content__item
+              article.services-card(id="projectName")
+                +pictureLazy(`services-card/img1.jpg`)(class="services-card__img")
+                header.services-card__info
+                  h3.services-card__heading Проектирование и строительство
+                  p.services-card__text
+                    | Комплексный процесс создания технической документации,
+                    | которая содержит необходимые расчеты, технико-экономическое
+                    | обоснование, чертежи, макеты, сметы, пояснительные записки
+                    | и многие другие материалы, которые требуются для строительства объекта.
+                  button.button.button--outline.services-card__btn(data-modal-heading data-hidden-name="service" data-hidden-value="Услуга номер 1" data-path="modal-callback" data-modal-legend="Оставьте заявку на услугу")
+                    | Оставить заявку
+      .services-content__block
+        .catalogue.catalogue--big
+          a.catalogue__name(href="/" target="_blank")
+            | Рассчитайте стоимость услуги
+          p.catalogue__text
+            | Заполните опросный лист и отправьте на почту sales@tnpc.ru,
+            | мы обработаем его в ближайшее время и свяжемся с вами!
+
+          span.catalogue__file-size.catalogue__file-size--doc
+            | Скачать опросный лист

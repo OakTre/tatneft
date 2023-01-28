@@ -1,0 +1,21 @@
+.media {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: var(--grid-offset);
+
+  @include mq(md) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__item {
+    grid-column: 12 span;
+
+    &--big {
+      grid-column: 24 span;
+
+      @include mq(md) {
+        grid-column: 12 span;
+      }
+    }
+  }
+}

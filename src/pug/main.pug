@@ -1,0 +1,14 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Главная"
+  - const siteLang = "ru"
+  - noScroll = "js-no-loco-scroll"
+  - noOsffset = "page-wrapper--height-reset"
+  - callBacSubkHeading = "Свяжитесь c нами"
+  - callBackHeading = "мы решим вашизадачи"
+  - noLoader = true
+
+block content
+  include pages/main/main.pug

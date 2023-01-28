@@ -1,0 +1,9 @@
+mixin socials()
+  -
+    socials = [
+      "wt", "vk", "tg"
+    ]
+
+  ul.social&attributes(attributes)
+    for item in socials
+      li.social__item #[a.social__link(href="/") #[+icon-mono(`${item}`)(width="16" height="16")]]

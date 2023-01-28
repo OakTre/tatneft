@@ -1,0 +1,47 @@
+-
+  docs_arr = [
+    "Требования Покупателя в области охраны труда, промышленной безопасности и охраны окружающей среды",
+    "Сводная ведомость результатов проведения СОУТ за 2019 г.",
+    "Сводная ведомость результатов проведения СОУТ за 2018 г.",
+    "Сводная ведомость результатов проведения СОУТ за 2017 г.",
+    "Сводная ведомость результатов проведения СОУТ за 2016 г.",
+  ]
+
+section.page-section
+  .site-content-container
+    .page-docs__filter
+      .page-custom-select.page-docs__select
+        select(name="category" class="js-empty-select")
+          option(value="Категория1") Категория1
+          option(value="Категория2") Категория2
+          option(value="Категория3") Категория3
+          option(value="Категория1") Категория1
+          option(value="Категория2") Категория2
+          option(value="Категория3") Категория3
+          option(value="Категория1") Категория1
+          option(value="Категория2") Категория2
+          option(value="Категория3") Категория3
+
+      .page-download-link.page-docs__dwnload-link
+        +icon-mono("download")(width="16" height="16" class="page-download-link__icon")
+        a(href="") Скачать одним архивом
+
+  .site-container
+    ul.page-docs__list
+      for item in docs_arr
+        li.page-docs__item
+          .doc-card
+            +pictureLazy(`doc-card/img1.jpg`)(class="doc-card__img")
+            a.doc-card__heading(href="./" target="_blank")= item
+
+            span.doc-card__file.file-size.file-size--pdf
+              | pdf, 5mb
+
+    ul.page-docs__list
+      for item in docs_arr
+        li.page-docs__item
+          .doc-card.doc-card--loader.page-laoder
+    .page-btn-center.page-docs__mobile-btn-container
+      .page-download-link.page-docs__dwnload-link.page-docs__dwnload-link--mobile
+        +icon-mono("download")(width="16" height="16" class="page-download-link__icon")
+        a(href="") Скачать одним архивом

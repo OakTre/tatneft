@@ -1,0 +1,88 @@
+-
+  vac_nav = [
+    { name: "Елабуга", tab: "elabuga" },
+    { name: "Набережные челны", tab: "chally" },
+    { name: "Альметьевск", tab: "almet" },
+    { name: "Бавлы", tab: "bavli" },
+    { name: "Мамадыш", tab: "mamadysh" }
+  ]
+
+  vac_list = [
+    "Изготовитель стеклопластиковых изделий намоткой",
+    "Лаборант химического анализа",
+    "Водитель погрузчика",
+    "Кладовщик на производство",
+    "Главный энергетик",
+    "Инженер-конструктор",
+    "Инженер по планированию",
+    "Слесарь МСР (на сезон)"
+  ]
+
+section.page-section
+  .site-container
+    .vacancy.js-tab-parent
+      h2.vacancy__heading.page-h1-heading
+        | Вакансии
+
+      .custom-select.custom-select--transparent.js-custom-select.vacancy__nav-mobile
+        button.custom-select__heading-select.js-custom-select-name
+          .custom-select__heading(arial-label="Открыть селект")
+            | Елабуга
+        ul.custom-select__body.js-custom-select-body
+          for item, i in vac_nav
+            - activeClass = i === 0 ? "is-active" : ""
+            li.custom-select__item
+              button.custom-select__choose.js-custom-select-choise.js-tabs-nav.is-active(data-tab-parent=item.tab)
+                span.custom-select__choose-label= item.name
+
+      ul.vacancy__nav
+        for item, i in vac_nav
+          - activeClass = i === 0 ? "is-active" : ""
+          li.vacancy__nav-item
+            button.page-tab-btn.js-tabs-nav.page-tab-btn--small(class=activeClass data-tab-parent=item.tab)= item.name
+
+      for item, i in vac_nav
+        - activeClass = i === 0 ? "is-active" : ""
+        ul.accordion-list.js-tabs-content.page-tab-content(class=activeClass data-tab-child=item.tab)
+          for item in vac_list
+            li.accordion-list__item
+              .accordion.js-accordion(data-close-other)
+                button.accordion__heading.js-accordion-btn
+                  span.accordion__heading-legend= item
+                  span.accordion__heading-icon
+                ul.accordion__body.js-accordion-content
+                  .accordion__body-content
+                    span.vacancy__legend Требуемый опыт работы
+                    ul.vacancy__list
+                      li.vacancy__item
+                        | не требуется
+                      li.vacancy__item
+                        | полная занятость
+                      li.vacancy__item
+                        | сменный график
+                    span.vacancy__legend Требования
+                    ul.vacancy__list
+                      li.vacancy__item
+                        | среднее, средне-специальное образование
+                      li.vacancy__item
+                        | желание работать
+                      li.vacancy__item
+                        | ответственность
+                      li.vacancy__item
+                        | обучаемость
+                    span.vacancy__legend Условия
+                    ul.vacancy__list
+                      li.vacancy__item
+                        | официальное трудоустройство ТР РФ, социальный пакет (больничные, отпуска и т.д.)
+                      li.vacancy__item
+                        | стабильная, официальная, своевременная заработная плата
+                      li.vacancy__item
+                        | бесплатная вахта до места работы и обратно с г. Мамадыш, г. Елабуга
+                      li.vacancy__item
+                        | гарантии и компенсации предусмотренные коллективным договором
+                      li.vacancy__item
+                        | бесплатная спецодежда
+                      li.vacancy__item
+                        | дружный коллектив
+                  button.button.button--outline.vacancy__btn(data-path="modal-vacancy")
+                    | Откликнуться на вакансию

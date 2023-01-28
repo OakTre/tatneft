@@ -1,0 +1,10 @@
+mixin news-card(name, img, link)
+  article.news-card&attributes(attributes)
+    +pictureLazy(`news-card/${img}.jpg`)(class="news-card__image")
+    header.news-card__info
+      time.date.news-card__date(datetime="2022-05-01T00:00:00.000Z")
+        span.date__num 01
+        span.date__year
+          | апреля 2022
+      h3.news-card__heading
+        a(href=link)= name

@@ -1,0 +1,233 @@
+[{
+  "id": 0,
+  "city": "Елабуга",
+  "coords": [55.844051, 52.102682],
+  "tab_name": "Головной офис",
+  "req_name": "Download",
+  "company_info": [{
+    "name": "Юридический и фактический адрес",
+    "legend": "423600, Республика Татарстан, Район Елабужский, улица 22.1 (промышленная площадка Алабуга тер.), корпус 48/3"
+  }, {
+    "name": "Почтовый адрес",
+    "legend": "423600, Республика Татарстан, г. Елабуга, УПУ, а/я 4"
+  }, {
+    "name": "Реквизиты",
+    "req": ["ОГРН:  1111644005175", "ИНН:  1644062664", "КПП:  164601001"]
+  }],
+  "req_file":	"/upload/iblock/809/i75r517jpyrp8hjg01i2z0fdp0jdq8qk.pdf",
+  "company_departments": [{
+    "name": "Приемная",
+    "head": {
+      "label": "",
+      "img": "",
+      "headName": ""
+    },
+    "contacts": [{
+      "type": "phone",
+      "label": "По стеклопластиковым трубам",
+      "value": "8 (8555) 75-19-98"
+    }, {
+      "type": "email",
+      "value": "info@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел кадров",
+    "head": {
+      "label": "Контактное лицо",
+      "img": "assets/images/avatar.jpg",
+      "headName": "Ходакова Наталья Николаевна"
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-91"
+    }, {
+      "type": "email",
+      "value": "hodakova@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел продаж;",
+    "head": {
+      "label": "",
+      "img": "",
+      "headName": ""
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-90"
+    }, {
+      "type": "phone",
+      "value": "8 (8555) 75-16-16"
+    }, {
+      "type": "email",
+      "value": "sales@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел закупки и логистики",
+    "head": {
+      "label": "Контактное лицо",
+      "img": "assets/images/avatar.jpg",
+      "headName": "Гумаров Рустем Рашитович"
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-16-49"
+    }, {
+      "type": "email",
+      "value": "gumarov@tnpc.ru"
+    }]
+  }]
+}, {
+  "id": 1,
+  "city": "Елабуга",
+  "coords": [54.897153, 52.286827],
+  "tab_name": "Завод в елабуге",
+  "req_name": "Download",
+  "company_info": [{
+    "name": "Юридический и фактический адрес",
+    "legend": "423600, Республика Татарстан, инфо о след городе"
+  }, {
+    "name": "Почтовый адрес",
+    "legend": "423600, инфо о след городе"
+  }, {
+    "name": "Реквизиты",
+    "req": ["ОГРН: test", "ИНН: test", "КПП: test"]
+  }],
+  "req_file":	"/upload/iblock/809/i75r517jpyrp8hjg01i2z0fdp0jdq8qk.pdf",
+  "company_departments": [{
+    "name": "Приемная1",
+    "head": {
+      "label": "",
+      "img": "",
+      "headName": ""
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-98"
+    }, {
+      "type": "email",
+      "value": "info@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел кадров1",
+    "head": {
+      "label": "Контактное лицо",
+      "img": "assets/images/avatar.jpg",
+      "headName": "Ходакова Наталья Николаевна"
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-91"
+    }, {
+      "type": "email",
+      "value": "hodakova@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел продаж1",
+    "head": {
+      "label": "",
+      "img": "",
+      "headName": ""
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-90"
+    }, {
+      "type": "phone",
+      "value": "8 (8555) 75-16-16"
+    }, {
+      "type": "email",
+      "value": "sales@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел закупки и логистики1",
+    "head": {
+      "label": "Контактное лицо",
+      "img": "assets/images/avatar.jpg",
+      "headName": "Гумаров Рустем Рашитович"
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-16-49"
+    }, {
+      "type": "email",
+      "value": "gumarov@tnpc.ru"
+    }]
+  }]
+}, {
+  "id": 2,
+  "city": "Елабуга1234",
+  "coords": [54.899907, 52.281195],
+  "tab_name": "Завод в елабуге1234",
+  "req_name": "Download",
+  "company_info": [{
+    "name": "Юридический и фактический адрес",
+    "legend": "423600, Республика Татарстан, инфо о след городе"
+  }, {
+    "name": "Почтовый адрес",
+    "legend": "423600, инфо о след городе"
+  }, {
+    "name": "Реквизиты",
+    "req": ["ОГРН: test", "ИНН: test", "КПП: test"]
+  }],
+  "req_file":	"/upload/iblock/809/i75r517jpyrp8hjg01i2z0fdp0jdq8qk.pdf",
+  "company_departments": [{
+    "name": "Приемная1",
+    "head": {
+      "label": "",
+      "img": "",
+      "headName": ""
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-98"
+    }, {
+      "type": "email",
+      "value": "info@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел кадров1",
+    "head": {
+      "label": "Контактное лицо",
+      "img": "assets/images/avatar.jpg",
+      "headName": "Ходакова Наталья Николаевна"
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-91"
+    }, {
+      "type": "email",
+      "value": "hodakova@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел продаж1",
+    "head": {
+      "label": "",
+      "img": "",
+      "headName": ""
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-19-90"
+    }, {
+      "type": "phone",
+      "value": "8 (8555) 75-16-16"
+    }, {
+      "type": "email",
+      "value": "sales@tnpc.ru"
+    }]
+  }, {
+    "name": "Отдел закупки и логистики1",
+    "head": {
+      "label": "Контактное лицо",
+      "img": "assets/images/avatar.jpg",
+      "headName": "Гумаров Рустем Рашитович"
+    },
+    "contacts": [{
+      "type": "phone",
+      "value": "8 (8555) 75-16-49"
+    }, {
+      "type": "email",
+      "value": "gumarov@tnpc.ru"
+    }]
+  }]
+}]

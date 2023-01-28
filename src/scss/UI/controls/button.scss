@@ -1,0 +1,73 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4rem 5.8rem;
+  color: var(--color-base09);
+  font: var(--font-common-b2);
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--color-base01);
+  border: 1px solid var(--color-base01);
+  border-radius: 99.9rem;
+  transition: color var(--transition), background-color var(--transition), border-color var(--transition);
+
+  &:hover {
+    color: var(--color-base01);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  &:focus {
+    &.focus-visible {
+      outline: 3px solid var(--color-primary);
+    }
+  }
+
+  &--second {
+    color: var(--color-base01);
+    background-color: var(--color-base08);
+    border-color: var(--color-base08);
+
+    &:hover {
+      background-color: var(--color-base07);
+    }
+
+    &:focus {
+      &.focus-visible {
+        outline: 3px solid var(--color-base01);
+      }
+    }
+  }
+
+  &--outline {
+    color: var(--color-base01);
+    background-color: transparent;
+    border: 1px solid var(--color-base01);
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-primary);
+    }
+
+    &:focus {
+      &.focus-visible {
+        outline: 3px solid var(--color-base01);
+      }
+    }
+  }
+
+  &--medium {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
+
+  &--small {
+    padding: 1.3rem 2.4rem;
+  }
+
+  @include mq(sm) {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
+  }
+}

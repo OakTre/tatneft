@@ -1,0 +1,17 @@
+.about-policy {
+  &__heading {
+    margin-bottom: 8rem;
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__catalogue {
+    margin-top: 3.2rem;
+
+    @include mq(sm) {
+      max-width: 100%;
+    }
+  }
+}

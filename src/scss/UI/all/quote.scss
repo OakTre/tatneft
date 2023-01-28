@@ -1,0 +1,69 @@
+.quote {
+  margin: 10rem 0 8rem;
+  padding: 4.8rem;
+  overflow: hidden;
+  background-color: var(--color-base07);
+  border-radius: 1.6rem;
+
+  blockquote {
+    p {
+      font: var(--font-text-lead);
+    }
+
+    color: var(--color-base01);
+    letter-spacing: -0.02em;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: center;
+    margin-top: 4.8rem;
+
+    img {
+      flex-shrink: 0;
+      width: 8rem;
+      height: 8rem;
+      margin-right: 1.6rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    @include mq(sm) {
+      flex-direction: column;
+      align-items: stretch;
+      margin-top: 5.6rem;
+
+      img {
+        width: 4.8rem;
+        height: 4.8rem;
+        margin-right: 0;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__autor {
+    &-name {
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--color-base01);
+      font: var(--font-text-t2-light-ln115);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      @include mq(sm) {
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &-pos {
+      font: var(--font-text-t3-light-ln100);
+      letter-spacing: 0.03em;
+    }
+  }
+
+  @include mq(sm) {
+    margin: 5.6rem 0;
+    padding: 2.4rem;
+  }
+}

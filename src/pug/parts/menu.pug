@@ -1,0 +1,57 @@
+-
+  menu_links = [
+    { name: "ПРОДУКЦИЯ", link: "./projects.html" },
+    { name: "УСЛУГИ", link: "./projects.html" },
+    { name: "Проекты", link: "./projects.html" },
+    { name: "Новости", link: "./news.html" },
+    { name: "О компании", link: "./about.html" },
+    { name: "Документация", link: "./page-docs.html" },
+    { name: "Контакты", link: "./contacts.html" }
+  ]
+
+  nav_items = [
+    "Композитные профили", "Композитные трубы", "SMC/ BMC препреги", "Композитные кабеленесущие системы",
+    "Композитные конструкции "
+  ]
+
+  nav_items2 = [
+    "Проектирование и строительство", "Шеф-монтаж", "Ремонт"
+  ]
+
+.main-menu.fix-blocks
+  .site-content-container
+    .main-menu__grid-container
+      .main-menu__grid-block
+        for item, index in menu_links
+          - classMobile = index === 0 || index === 1 ? "main-menu__link-legend--mobile" : ""
+          a.main-menu__link-legend.page-hover-effect(class=classMobile href=item.link)= item.name
+
+        a.main-menu__legend-small.main-menu__legend-small--top-auto.page-hover-effect(href="tel:+78002505999")  8-800-250-59-99
+        a.main-menu__legend-small.page-hover-effect(href="mailto:sales@tnpc.ru") sales@tnpc.ru
+
+        +socials()(class="main-menu__social-link")
+
+        button.button.main-menu__mobile-btn.button--outline(data-modal-heading data-path="modal-callback" data-modal-legend="Оставьте заявку")
+          | Оставить Заявку
+
+      .main-menu__grid-block
+        .main-menu__legend.js-menu-legend1 Продукция
+        ul.main-menu__nav-list
+          for item, index in nav_items
+            li.main-menu__nav-item.js-products-img(data-image=`assets/images/products/img${index}.jpg`) #[a.main-menu__legend-small.page-hover-effect.js-hover-menu(href="./category-detail.html")= item ]
+
+        .main-menu__legend.js-menu-legend2 Услуги
+        ul.main-menu__nav-list
+          for item, index in nav_items2
+            li.main-menu__nav-item.js-services-img(data-image=`assets/images/gallery/img${index}.jpg`) #[a.js-service-link.main-menu__legend-small.page-hover-effect.js-hover-menu2(href="./services.html#test")= item ]
+
+
+        .main-menu__nav-imgs.js-products-img-container
+          //- for item, index in nav_items
+            //- .main-menu__nav-img.js-hover-imgs
+            //-   +pictureLazy(`products/img${index}.png`)
+
+        .main-menu__nav-imgs.main-menu__nav-imgs--services.js-services-img-container
+          //- for item, index in nav_items2
+          //-   .main-menu__nav-img.main-menu__nav-img--full.js-hover-imgs2
+          //-     +pictureLazy(`gallery/img${index}.jpg`)

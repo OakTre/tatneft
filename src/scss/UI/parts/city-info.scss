@@ -1,0 +1,117 @@
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable selector-class-pattern */
+.city-info {
+  --loader-color-2: var(--color-base06);
+  --loader-color-1: var(--color-base07);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 52rem;
+  padding: 4.8rem;
+  background-color: var(--color-base09);
+  border: 1px solid var(--color-base06);
+  border-radius: 1.6rem;
+
+  &__legend {
+    max-width: 56.8rem;
+    color: var(--color-base01);
+    font: var(--font-text-t1-light-ln125);
+
+    &-small {
+      display: block;
+      margin-bottom: 1.2rem;
+      color: var(--color-base04);
+      font: var(--font-text-t4-reg);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      &:not(:nth-of-type(1)) {
+        margin-top: 4rem;
+
+        @include mq(sm) {
+          margin-top: 3.2rem;
+        }
+      }
+    }
+
+    &-container {
+      display: flex;
+      align-items: center;
+
+      .city-info__legend {
+        margin-right: 3.2rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @include mq(sm) {
+          margin-right: 0;
+          margin-bottom: 0.8rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      @include mq(sm) {
+        display: block;
+      }
+    }
+  }
+
+  &__download-btn {
+    display: inline-block;
+    width: auto;
+    margin-top: auto;
+    pointer-events: all;
+
+    @include mq(sm) {
+      margin-top: 4rem;
+      padding: 1.3rem 2.4rem;
+    }
+  }
+
+  @include mq(lg) {
+    padding: 3.2rem;
+  }
+
+  @include mq(sm) {
+    min-height: 0;
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+  }
+
+  &--map {
+    position: relative;
+    padding: 0 !important;
+    overflow: hidden;
+    background-color: var(--color-base06);
+    border: none;
+
+    @include mq(sm) {
+      height: 34rem;
+    }
+  }
+
+  &--loader {
+    @include mq(sm) {
+      min-height: 34rem;
+    }
+  }
+}
+
+.map-marker {
+  display: block;
+  width: 7.3rem;
+  height: 7.3rem;
+  transform: translate(-3.6rem, -7.3rem);
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

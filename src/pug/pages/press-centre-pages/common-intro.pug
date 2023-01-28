@@ -1,0 +1,22 @@
+-
+  tag_list = [
+    { name: "Новости", link: "./news.html" },
+    { name: "Статьи", link: "./articles.html" },
+    { name: "Видео", link: "./videos.html" },
+    { name: "Фото", link: "./pics.html" }
+  ]
+
+  callBacSubkHeading = "Подписывайтесь"
+  callBackHeading = "на полезную рассылку"
+  callBackEmail = true
+
+section.page-intro.page-top-offset
+  .site-content-container
+    h1.page-intro__heading.page-hero-heading
+      | Пресс-центр
+    ul.page-intro__tag-list
+      for item, index in tag_list
+        //- pageName и формируется в корне страницы пр. pug/news.pug
+        - activeClass = pageName === item.name ? "is-active" : ""
+        li.page-intro__tag
+          a.page-tab-btn(href=item.link class=activeClass)= item.name

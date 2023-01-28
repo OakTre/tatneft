@@ -1,0 +1,85 @@
+.category-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50.6rem;
+  padding: 4rem;
+  overflow: hidden;
+  background-color: var(--color-base07);
+  border-radius: 1.6rem;
+  transition: background-color var(--transition);
+
+  @include mq(lg) {
+    padding: 2.4rem;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transition: opacity var(--transition);
+    content: "";
+  }
+
+  &__img {
+    display: block;
+    width: 35rem;
+    height: 35rem;
+    object-fit: contain;
+
+    @include mq(xl) {
+      width: 25rem;
+      height: 25rem;
+    }
+
+    @include mq(sm) {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  &__legend {
+    margin-top: auto;
+    color: var(--color-base01);
+    font: var(--font-over-light);
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: "";
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-base08);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @include mq(xl) {
+    height: 40.5rem;
+  }
+
+  @include mq(sm) {
+    height: auto;
+    min-height: 16rem;
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+  }
+}

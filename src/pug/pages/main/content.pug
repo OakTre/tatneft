@@ -1,0 +1,72 @@
+-
+  main_arr = [
+    {
+      name: 'Городская среда',
+      className: 'fisrt',
+      slug: 'city',
+      tooltips: [
+        { name: "Ограждения", connetc: "ograzh", pos: ["90%", "15%"] },
+        { name: "Несущие конструкции", connetc: "konstr", pos: ["50%", "95%"] },
+      ]
+    },
+    {
+      name: 'Промышленность',
+      slug: 'industry',
+      className: 'second',
+      tooltips: [
+        { name: "Спортивные сооружения", connetc: "sport", pos: ["17%", "68%"] },
+        { name: "ЖД платформы", connetc: "zhd", pos: ["5%", "55%"] },
+      ]
+    },
+    {
+      name: 'Месторождения',
+      slug: 'fields',
+      className: 'third',
+      tooltips: [
+        { name: "Остановочные павильоны", connetc: "pav", pos: ["27%", "68%"] },
+        { name: "Скамейки", connetc: "skam", pos: ["45%", "55%"] },
+      ]
+    },
+  ]
+
+
+section.spheres.js-tab-parent.page-section
+  .spheres__imgs
+    +picture("main-bg-01.jpeg")(class="spheres__img" class="is-active")
+    +picture("main-bg-02.jpg")(class="spheres__img")
+    +picture("main-bg-03.jpg")(class="spheres__img")
+
+  .site-container.spheres__container
+    .spheres__inner.js-spheres-content.swiper
+      .swiper-wrapper
+        - num = 0
+        for item, idex in main_arr
+          - num++
+          - activeClass = idex === 0 ? 'is-active' : ''
+          .swiper-slide.spheres__content.page-tab-content.js-tabs-content(data-tab-child=item.slug class=item.className class=activeClass)
+            .spheres__legend(class="js-legend-heading")
+              span= item.name
+            .spheres__tooltips-mobile-wrapper
+              .spheres__tooltips-mobile
+                +picture(`main-bg-0${num}.${ idex === 0 ? 'jpeg' : 'jpg'}`)(class="spheres__img spheres__img--mobile")
+                for tooltip in item.tooltips
+                  button.spheres-tooltip-mobile.js-spheres-tooltip-mobile(data-tooltip-parent=tooltip.connetc style={"top": tooltip.pos[0], "left": tooltip.pos[1]})
+            .spheres__tooltips
+              .spheres-tooltip-help.js-spheres-tooltip-help
+                p
+                  | Перемещайтесь по фотографии и нажимайте на «+» для получения подбробной информации об объекте
+              for tooltip in item.tooltips
+                .spheres-tooltip.js-spheres-tooltip-parent(data-tooltip-child=tooltip.connetc style={"top": tooltip.pos[0], "left": tooltip.pos[1]})
+                  a.spheres-tooltip__legend.js-spheres-tooltip-btn(href="./category-detail.html")= tooltip.name
+                  .spheres-tooltip__content
+                    img(src="assets/images/tooltip-img.png" alt="test alt")
+                    .spheres-tooltip__content-text
+                      | Производсятся из композитных конструкций, обеспечивают максимальную прочность
+
+    .spheres-pagination.spheres__pagination
+
+    //- ul.spheres__nav
+    //-   for item, i in main_arr
+    //-     - activeClass = i === 0 ? 'is-active' : ''
+    //-     li.spheres__nav-item
+    //-       button.spheres__nav-btn.page-tab-btn.js-tabs-nav(data-tab-parent=item.slug data-index=i class=activeClass)= item.name

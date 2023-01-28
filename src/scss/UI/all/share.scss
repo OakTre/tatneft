@@ -1,0 +1,44 @@
+.share {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    display: block;
+    flex-shrink: 0;
+    margin-right: 2.4rem;
+    color: var(--color-base04);
+    font: var(--font-common-label1);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    content: attr(data-text);
+  }
+
+  &__item {
+    margin-right: 0.8rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    color: var(--color-base01);
+    background-color: var(--color-base08);
+    border-radius: 50%;
+    transition: background-color var(--transition);
+
+    &:hover {
+      background-color: var(--color-base07);
+    }
+
+    svg {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}

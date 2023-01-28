@@ -1,0 +1,31 @@
+.safety {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    gap: var(--grid-offset);
+
+    @include mq(md) {
+      grid-template-columns: repeat(9, 1fr);
+    }
+
+    @include mq(sm) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    grid-column: 4 span;
+
+    @include mq(lg) {
+      grid-column: 5 span;
+    }
+
+    @include mq(md) {
+      grid-column: 3 span;
+    }
+
+    @include mq(sm) {
+      grid-column: 2 span;
+    }
+  }
+}

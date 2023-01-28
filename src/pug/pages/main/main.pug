@@ -1,0 +1,12 @@
+main.page-main.main
+  .main-preloader(style={"--w": "0%"} data-vid-url="assets/include/vid_main.mp4")
+    img.main-preloader__logo(src="assets/images/logo-small.svg" alt="Логотип компании")
+    .main-preloader__percents
+      | 0 %
+    .main-preloader__progress
+      span
+
+  include intro.pug
+  include content.pug
+  include ../index/products.pug
+  include ../../parts/callback-form-section.pug

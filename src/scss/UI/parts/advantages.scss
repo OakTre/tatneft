@@ -1,0 +1,89 @@
+/* stylelint-disable selector-class-pattern */
+.advantages {
+  &__slider {
+    @include mq(sm) {
+      width: auto;
+      margin-right: calc(var(--content-padding) * -1);
+      padding-right: var(--content-padding);
+      overflow: visible;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: var(--grid-offset);
+    margin-top: 14rem;
+    counter-reset: order;
+
+    @include mq(lg) {
+      margin-top: 10rem;
+    }
+
+    @include mq(sm) {
+      display: flex;
+      gap: 0;
+      margin-top: 0;
+    }
+
+    &--slider {
+      display: flex;
+      gap: 0;
+      margin-top: 0;
+
+      @include mq(sm) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item {
+    grid-column: 6 span;
+
+    @include mq(md) {
+      grid-column: 12 span;
+    }
+  }
+}
+
+.advantages-container {
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  gap: var(--grid-offset);
+  margin-top: 14rem;
+
+  .swiper {
+    margin-right: -100%;
+    padding-right: 100%;
+  }
+
+  @include mq(lg) {
+    margin-top: 10rem;
+  }
+
+  @include mq(md) {
+    display: block;
+  }
+
+  @include mq(sm) {
+    display: flex;
+    gap: 0;
+    margin-top: 4.8rem;
+  }
+
+  &__block {
+    min-width: 0;
+
+    &:nth-child(1) {
+      grid-column: 3 span;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      grid-column: 17 span;
+    }
+  }
+}

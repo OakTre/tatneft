@@ -1,0 +1,12 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "документация"
+  - const siteLang = "ru"
+  - callBacSubkHeading = "Проконсультируем "
+  - callBackHeading = "по любому вопросу"
+  - pageName = "Технические условия"
+
+block content
+  include pages/page-docs/main.pug

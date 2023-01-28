@@ -1,0 +1,153 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 16;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--header-height);
+
+  &.is-fixed {
+    position: fixed;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 23.2rem;
+      background: linear-gradient(180deg, #080808 0%, rgba(8, 8, 8, 0.822896) 36.35%, rgba(8, 8, 8, 0.629542) 61.89%, rgba(8, 8, 8, 0) 100%);
+      content: "";
+      pointer-events: none;
+
+      @include mq(lg) {
+        height: 22.2rem;
+      }
+
+      @include mq(sm) {
+        height: 12.2rem;
+      }
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: var(--grid-offset);
+
+    &-block {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(1) {
+        grid-column: 7 span;
+      }
+
+      &:nth-child(2) {
+        grid-column: 17 span;
+      }
+    }
+
+    @include mq(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__lang-links {
+    display: flex;
+    align-items: center;
+    margin-right: 13.1rem;
+    margin-left: auto;
+
+    &::before {
+      order: 2;
+      margin: 0 0.4rem;
+      color: var(--color-base04);
+      content: "-";
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__lang-link {
+    color: var(--color-base04);
+    font: var(--font-common-b2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &:nth-child(1) {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &.is-active {
+      color: var(--color-base01);
+
+      &:hover {
+        color: var(--color-base04);
+      }
+    }
+
+    &:hover {
+      color: var(--color-base01);
+    }
+  }
+
+  &__nav {
+    margin-left: 8rem;
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    &--mr {
+      margin-right: 0.8rem;
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__mobile-tel {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 5.6rem;
+    height: 5.6rem;
+    margin-left: 1rem;
+    color: var(--color-base01);
+    border: 1px solid var(--color-base01-alfa10);
+    border-radius: 50%;
+
+    .icon {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    @include mq(lg) {
+      display: flex;
+    }
+
+    @include mq(sm) {
+      width: 4.8rem;
+      height: 4.8rem;
+      margin-right: 1rem;
+      margin-left: 0;
+    }
+  }
+
+  @include mq(sm) {
+    align-items: flex-end;
+  }
+}

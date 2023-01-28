@@ -1,0 +1,18 @@
+-
+  news_list1 = [
+    { name: "ООО «Татнефть-пресскомпозит» приняла активное участие в 14-й международной специализированной выставке «КОМПОЗИТ-ЭКСПО 2022»", img: "img1", link: "./media-deatail.html" },
+    { name: "Татнефть-Пресскомпозит приняла участие во 2-ой ежегодной профессиональной конференции «Горнорудная промышленность России и СНГ. Строительство и модернизация»", img: "img1", link: "./media-deatail.html" }
+  ]
+
+section.page-section.more-section
+  .site-content-container
+    h2.page-h1-heading.more-section__heding
+      | Другие новости
+  .site-container
+    ul.more-section__container
+      for item in news_list1
+        li.more-section__item
+          +news-card(item.name, item.img, item.link)(class= bigClassCart)
+    .page-btn-center
+      a.button.more-section__btn.button--outline(href="")
+        | Смотреть все

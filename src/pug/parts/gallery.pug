@@ -1,0 +1,13 @@
+section.page-section.gallery-container
+  .cursor.js-fake-cursor
+    .cursor__items
+      +icon-mono("arrow-shevron")(width="24" height="24" class="cursor__item")
+      +icon-mono("arrow-shevron")(width="24" height="24" class="cursor__item")
+  h2.visually-hidden Галлерея
+  .site-container
+    .gallery.swiper.js-gallery-swiper
+      ul.gallery__list.swiper-wrapper
+        each i in Array.from(Array(4).keys())
+          li.gallery__item.swiper-slide
+            +pictureLazy(`gallery/img${i}.jpg`)(class="gallery__item-img")
+      .page-swiper-pagination.gallery__pagination

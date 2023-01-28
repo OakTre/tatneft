@@ -1,0 +1,79 @@
+section.page-section.js-contacts-section(data-url="assets/include/cities.json" data-map-icon="assets/images/pin.png")
+  .site-container
+    .contacts__container
+      .contacts__container-block.js-city-info-container
+        .city-info.city-info--loader.page-laoder
+      .contacts__container-block
+        .city-info.city-info--map.js-map
+
+    .contacts__departments.js-contacts-loader.contacts__loader
+      ul.departments__list
+        each i in Array.from(Array(4).keys())
+          li.departments__item
+            .department.department--loader.page-laoder
+
+    .contacts__departments
+      ul.departments__list.js-departments-container
+
+script(src="https://api-maps.yandex.ru/2.1/?apikey=b0b15954-57af-4901-b78c-0ad5bd94cda8&lang=ru_RU")
+
+
+
+//- ВЕРСТКА
+  //- li.departments__item
+  //-   .department
+  //-     h4.department__legend Приемная
+  //-     .department__contacts
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect 8 (8555) 75-19-98
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect 8 (8555) 75-19-98
+  //- li.departments__item
+  //-   .department
+  //-     h4.department__legend Отдел кадров
+  //-     .author.department__author
+  //-       img.author__image(src="assets/images/avatar.jpg" alt="")
+  //-       .author__info
+  //-         span.author__legend Контактное лицо
+  //-         span.author__name Ходакова Наталья Николаевна
+  //-     .department__contacts
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect 8 (8555) 75-19-91
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect hodakova@tnpc.ru
+  //- li.departments__item
+  //-   .department
+  //-     h4.department__legend Отдел продаж
+  //-     .department__contacts
+  //-       a.department__legend.department__legend--link.department__legend--labeled(href="" data-text="По стеклопластиковым трубам")
+  //-         span.page-hover-effect 8 (8555) 75-19-90
+  //-       a.department__legend.department__legend--link.department__legend--labeled(href="" data-text="По пултрузионным изделиям и SMC")
+  //-         span.page-hover-effect 8 (8555) 75-16-16
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect sales@tnpc.ru
+  //- li.departments__item
+  //-   .department
+  //-     h4.department__legend Отдел закупки и логистики
+  //-     .author.department__author
+  //-       img.author__image(src="assets/images/avatar.jpg" alt="")
+  //-       .author__info
+  //-         span.author__legend Контактное лицо
+  //-         span.author__name Ходакова Наталья Николаевна
+  //-     .department__contacts
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect 8 (8555) 75-16-49
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect gumarov@tnpc.ru
+  //- li.departments__item
+  //-   .department
+  //-     h4.department__legend Отдел закупки и логистики
+  //-     .author.department__author
+  //-       img.author__image(src="assets/images/avatar.jpg" alt="")
+  //-       .author__info
+  //-         span.author__legend Контактное лицо
+  //-         span.author__name Ходакова Наталья Николаевна
+  //-     .department__contacts
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect 8 (8555) 75-16-49
+  //-       a.department__legend.department__legend--link(href="")
+  //-         span.page-hover-effect gumarov@tnpc.ru

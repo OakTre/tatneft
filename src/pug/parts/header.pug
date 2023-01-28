@@ -1,0 +1,30 @@
+-
+  nav = [
+    { name: "Продукция", link: "./category-detail.html" },
+    { name: "Проекты", link: "./projects.html" },
+    { name: "Услуги", link: "./services.html#test" },
+  ]
+
+header.header.fix-blocks.is-fixed
+  .site-container.header__row
+    .header__row-block
+      a.logo(href="/")
+        img(src="assets/images/logo.svg" alt="Логотип компании")
+    .header__row-block
+      button.burger-menu.js-open-menu
+        span
+        span
+      a.header__mobile-tel(href="tel:+88002505999")
+        +icon-mono("phone")(width="12" height="12")
+      nav.nav.header__nav
+        ul.nav__list
+          for item in nav
+            li.nav__item #[a.nav__link(href= item.link)= item.name]
+      .header__lang-links
+        a.header__lang-link.is-active(href="") Ru
+        a.header__lang-link(href="") En
+
+      a.header__btn.header__btn--mr.button.button--second.button--small(href="tel:+88002505999")
+        | 8-800-250-59-99
+      button.header__btn.button.button--outline.button--small(data-modal-heading data-path="modal-callback" data-modal-legend="Оставьте заявку")
+        | Заявка

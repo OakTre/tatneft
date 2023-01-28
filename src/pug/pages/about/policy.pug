@@ -1,0 +1,25 @@
+section.page-section.about-policy
+  .site-content-container
+    h2.page-h1-heading.about-policy__heading
+      | Политика компании
+    ul.accordion-list
+      li.accordion-list__item
+        .accordion.js-accordion
+          button.accordion__heading.js-accordion-btn
+            span.accordion__heading-legend В области работы с потребителями
+            span.accordion__heading-icon
+          ul.accordion__body.js-accordion-content
+            .accordion__body-content
+              p
+                | Осуществление маркетинговых исследований для определения требований потребителей и оценки их удовлетворенности;
+                | Обеспечение консультативного сопровождения при реализации продукции.
+              p
+                | Систематический анализ текущих и перспективных требований, ожидание потребителей и их удовлетворенности нашей продукцией, услугами.
+
+              .catalogue.catalogue--small.about-policy__catalogue
+                +pictureLazy(`doc-card/img1.jpg`)(class="catalogue__img")
+                a.catalogue__name(href="/" target="_blank")
+                  | Политика компании
+
+                span.file-size.catalogue__file-size.file-size--pdf
+                  | pdf, 5mb

@@ -1,0 +1,25 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+doctype html
+html(lang=siteLang)
+  head
+    include ../parts/head.pug
+  body(class=bodyClass class="js-no-loco-scroll")
+    .page-wrapper.page-wrapper--height-reset
+        block header
+            include ../parts/header.pug
+        include ../parts/menu.pug
+
+        block content
+    .preloader.js-preloader
+    .modal
+      include ../parts/modals/modal.pug
+
+  block scripts
+    script.
+      const path = 'assets/'
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

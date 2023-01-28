@@ -1,0 +1,31 @@
+-
+  vid_list = [
+    "О продукции и компании «Татнефть-пресскомпози»",
+    "Видеоинструкция по использованию программы Revit для семейства кабеленесущих систем",
+    "Рустам Минниханов запустил на «ТАНЕКО» три новых производства",
+    "Технология производства изделий из пресс-материалов SMC и BMC ",
+    "Продукция компании Татнефть-Пресскомпозит лауреат конкурса «лучшие товары и услуги республики татарстан»",
+    "«Татнефть» запустила три новых производства на «ТАНЕКО»"
+  ]
+
+section.page-section
+  .site-container
+    ul.media
+      for item, index in vid_list
+        li.media__item
+          .media-card(href="assets/include/vid.mp4" data-fancybox="vids")
+            .media-card__preview-image
+              .media-card__play-icon-wrapper.media-card__play-icon-wrapper--mobile
+                +icon-mono("play")(class="media-card__play-icon" width="16" height="16")
+              +pictureLazy(`media-card/img1.jpg`)
+            .media-card__info
+              .media-card__info-wrapper
+                .media-card__play-icon-wrapper
+                  +icon-mono("play")(class="media-card__play-icon" width="16" height="16")
+                .media-card__timing
+                  | 11:54
+              .media-card__name
+                | О продукции и компании «Татнефть-пресскомпозит»
+    .page-btn-center
+      button.button.button--outline
+        | Показать еще

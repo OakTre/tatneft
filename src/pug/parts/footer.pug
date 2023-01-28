@@ -1,0 +1,51 @@
+-
+  nav_list = [
+    "Композитные профили", "Композитные трубы", "SMC/ BMC препреги",
+    "Композитные кабеленесущие системы", "Композитные конструкции"
+  ]
+
+  nav_list1 = [
+    "Проектирование и строительство", "Шеф-монтаж", "Ремонт"
+  ]
+
+  nav_list2 = [
+    "Проекты", "Новости", "О компании", "Документация", "Контакты"
+  ]
+
+footer.footer
+  .site-content-container
+    .footer__grid-container
+      .footer__grid-block
+        a.footer__legend.page-hover-effect(href="") 8-800-250-59-99
+        +socials()(class="footer__social")
+      .footer__grid-block
+        a.footer__legend.page-hover-effect(href="mailto:sales@tnpc.ru")  sales@tnpc.ru
+        +socials()(class="footer__social footer__social--mobile")
+        .footer__legend-small
+          | 423600, Республика Татарстан, Елабужский район, улица 22.1, корпус 48/3
+      .footer__grid-block
+        .footer__legend-nav Продукция
+        ul.nav-list.footer__nav
+          for item in nav_list
+            li.nav-list__item #[a.nav-list__link.page-hover-effect(href="/")= item]
+        .footer__legend-nav Услуги
+        ul.nav-list.footer__nav
+          for item in nav_list1
+            li.nav-list__item #[a.nav-list__link.page-hover-effect(href="/")= item]
+      .footer__grid-block
+        .footer__legend-nav-list
+          for item in nav_list2
+            a.footer__legend-nav.page-hover-effect(href="/")= item
+
+    .footer__grid-container.footer__copyright
+      .footer__grid-block
+        a.logo.logo--small.footer__logo(href="/")
+          img(src="assets/images/logo.svg" alt="Логотип компании")
+      .footer__grid-block
+        .footer__legend-small © 2022 ООО «Татнефть-Пресскомпозит»
+      .footer__grid-block
+        a.footer__legend-small.page-hover-effect(href="/")  Политика конфиденциальности
+      .footer__grid-block
+        a.markweber(href="/" target="_blank")
+          | Разработано
+          +icon-multi("mw")(width="80" height="20")

@@ -1,0 +1,11 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Проекты"
+  - const siteLang = "ru"
+  - callBacSubkHeading = "Свяжитесь с нами"
+  - callBackHeading = "Реализуем проект под ваши цели"
+
+block content
+  include pages/project-detail/main.pug

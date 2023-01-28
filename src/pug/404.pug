@@ -1,0 +1,9 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Страница не найдена"
+  - const siteLang = "ru"
+
+block content
+  include pages/error-page/main.pug

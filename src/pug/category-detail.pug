@@ -1,0 +1,11 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Страница категории"
+  - const siteLang = "ru"
+  - callBacSubkHeading = "Поможем подобрать"
+  - callBackHeading = "подходящую продукцию"
+
+block content
+  include pages/category-detail/main.pug

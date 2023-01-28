@@ -1,0 +1,8 @@
+mixin category(name, img, list)
+  article.category
+    +pictureLazy(`products/${img}.png`)(class="category__img")
+    //- img(src=`assets/images/` alt= name class="category__img")
+    h3.category__legend #[a(href="./category-detail.html")= name]
+    ul
+      for item in list
+        li= item

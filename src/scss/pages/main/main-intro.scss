@@ -1,0 +1,311 @@
+.main-intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 14;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  transition: opacity 400ms, visibility 400ms;
+
+  @include mq(lg) {
+    position: relative;
+  }
+
+  @include mq(sm) {
+    position: relative;
+    height: 100vh;
+    max-height: 67rem;
+
+    &::after {
+      position: absolute;
+      top: 4rem;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 6.4rem;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) -1.13%, rgba(0, 0, 0, 0.562242) 30.18%, rgba(0, 0, 0, 0.783621) 56%, #000000 84.72%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      content: "";
+    }
+  }
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 15.1rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.445834) 22.37%, rgba(0, 0, 0, 0.704344) 50.06%, rgba(0, 0, 0, 0.925283) 74.03%, #000000 100%);
+    content: "";
+
+    @include mq(md) {
+      // bottom: 5rem;
+      // z-index: 13;
+
+      display: none;
+    }
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  &__bg-mobile {
+    display: none;
+    width: auto;
+    height: 31.6rem;
+    margin: 0 calc(-1 * var(--content-padding));
+    margin-top: 4rem;
+    background-image: url("../images/main-bg-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    @include mq(lg) {
+      display: block;
+      height: 35.6rem;
+      margin-top: 17rem;
+      background-size: contain;
+    }
+
+    @include mq(sm) {
+      height: 31.6rem;
+      margin-top: 4rem;
+      background-size: cover;
+    }
+  }
+
+  &__vid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-bottom: 4.8rem;
+    color: var(--color-base01);
+
+    &-block {
+      @include mq(md) {
+        &:nth-child(1) {
+          order: 2;
+          align-self: stretch;
+        }
+
+        &:nth-child(2) {
+          order: 1;
+        }
+      }
+    }
+
+    &-legend {
+      display: block;
+      margin-bottom: 2.4rem;
+      font: var(--font-over-elight);
+      text-transform: uppercase;
+
+      @include mq(md) {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &-heading {
+      max-width: 98.4rem;
+      font: var(--font-hero);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      @include mq(lg) {
+        font: var(--font-heading-1);
+      }
+
+      @include mq(sm) {
+        font: var(--font-hero);
+      }
+    }
+
+    &-info {
+      width: 27.6rem;
+      padding-top: 3.3rem;
+      border-top: 1px solid var(--color-base01-alfa30);
+
+      @include mq(md) {
+        width: auto;
+        padding-top: 0;
+        border: none;
+      }
+    }
+
+    &-first {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font: var(--font-numbers-3);
+      text-transform: uppercase;
+
+      &::after {
+        flex-shrink: 0;
+        width: 3.6rem;
+        height: 3.8rem;
+        background-image: url("../images/venok.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        content: "";
+      }
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &-text {
+      margin-top: 7.6rem;
+      padding-top: 3.3rem;
+      font: var(--font-text-t3-light-ln125);
+      letter-spacing: 0.03em;
+      border-top: 1px solid var(--color-base01-alfa30);
+
+      @include mq(md) {
+        display: flex;
+        align-items: center;
+        max-width: 15rem;
+        margin-top: 0;
+        margin-bottom: 6.4rem;
+        padding-top: 0;
+        font: 300 1.1rem/110% var(--main-ff);
+        border: none;
+
+        span {
+          display: none;
+        }
+
+        &::before {
+          flex-shrink: 0;
+          width: 3.6rem;
+          height: 3.8rem;
+          margin-right: 1.2rem;
+          background-image: url("../images/venok.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          content: "";
+        }
+      }
+    }
+
+    @include mq(md) {
+      flex-direction: column;
+      align-items: flex-end;
+      padding-bottom: 2.4rem;
+    }
+  }
+
+  &__mobile-btn {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    order: 123;
+    width: 100%;
+    margin-top: 2.4rem;
+    padding: 1.1rem 0 1.2rem 3.2rem;
+    overflow: hidden;
+    font: 200 1.2rem/1 var(--main-ff);
+    text-transform: uppercase;
+    border: 1px solid var(--color-base06);
+    border-radius: 99.9rem;
+
+    a {
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+      }
+    }
+
+    &-anim {
+      width: 16rem;
+      height: 5rem;
+      overflow: hidden;
+      background-image: url("../images/sprite-animation.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 85.6rem 5rem;
+      border-radius: 99.9rem;
+      animation: anim 30s linear infinite;
+    }
+
+    @include mq(md) {
+      display: flex;
+    }
+  }
+
+  &__animation {
+    display: inline-flex;
+    align-items: center;
+
+    &-container {
+      flex-shrink: 0;
+      width: 18.5rem;
+      height: 7.2rem;
+      margin-left: 1rem;
+      overflow: hidden;
+      background-image: url("../images/sprite-animation.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 85.6rem 5rem;
+      border-radius: 99.9rem;
+      background-color: #000;
+      border: 1px solid var(--color-base06);
+      animation: anim 30s linear infinite;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    @include mq(sm) {
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes anim {
+  from {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0 50%;
+  }
+}

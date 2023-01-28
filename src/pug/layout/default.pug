@@ -1,0 +1,30 @@
+include ../data/config.pug
+include ../mixins/**/*.pug
+
+block variables
+
+doctype html
+html(lang=siteLang data-lang="en")
+  head
+    include ../parts/head.pug
+  body(class=bodyClass class=noScroll class="no-scroll")
+    block header
+      include ../parts/header.pug
+    include ../parts/menu.pug
+    .smooth-scroll
+      .page-wrapper(class=noOsffset)
+
+        block content
+
+        block footer
+          include ../parts/footer.pug
+    if !noLoader
+      .preloader.js-preloader
+    .modal
+      include ../parts/modals/modal.pug
+
+  block scripts
+    script.
+      const path = 'assets/'
+    script(src="assets/js/main.js?v=" + siteVersion)
+    script(src="assets/js/backend.js?v=" + siteVersion)

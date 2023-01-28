@@ -1,0 +1,12 @@
+.logo {
+  display: inline-block;
+  max-width: 33.4rem;
+
+  &--small {
+    max-width: 27.2rem;
+  }
+
+  @include mq(sm) {
+    max-width: 17.2rem;
+  }
+}

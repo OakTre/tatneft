@@ -1,0 +1,362 @@
+/* stylelint-disable indentation */
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable selector-class-pattern */
+.types-table {
+  width: 100%;
+
+  &--heading {
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__max-width-wrapper {
+    max-width: 99.2rem;
+    overflow: hidden;
+
+    @include mq(custom, max, 1440) {
+      max-width: 92.2rem;
+    }
+
+    @include mq(lg) {
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    &--scrollable {
+      @include mq(md) {
+        width: auto;
+        max-width: none;
+        margin-right: -2.4rem;
+        padding-right: 2.4rem;
+        overflow: auto;
+
+        @include noScrollbar();
+      }
+    }
+  }
+
+  &__body {
+    display: block;
+
+    .types-table__cell {
+      color: var(--color-base01);
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.4rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid var(--color-base06);
+
+    &-head {
+      margin-bottom: 2.4rem !important;
+      border-bottom: 1px solid var(--color-base06) !important;
+
+      .types-table__cell {
+        font: var(--font-in-table);
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+      }
+
+      @include mq(sm) {
+        margin-bottom: 1.2rem !important;
+        padding-bottom: 1.2rem;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border: none;
+
+      .types-table__cell {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    @include mq(lg) {
+      justify-content: space-between;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1.2rem;
+    }
+  }
+
+  &__cell {
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 8rem;
+    text-align: left;
+
+    &:nth-child(1) {
+      width: 14rem;
+
+      @include mq(xl) {
+        width: 9rem;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 12.1rem;
+
+      @include mq(md) {
+        width: 7.7rem;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 13rem;
+
+      @include mq(md) {
+        width: 9.3rem;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 13.1rem;
+
+      @include mq(custom, max, 1450) {
+        width: 13.4rem;
+      }
+
+      @include mq(md) {
+        width: 9.1rem;
+      }
+    }
+
+    &:nth-child(5) {
+      width: 9.6rem;
+
+      @include mq(custom, max, 1450) {
+        width: 10rem;
+      }
+
+      @include mq(md) {
+        width: 7.6rem;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include mq(custom, max, 1450) {
+      margin-right: 7rem;
+    }
+
+    @include mq(xl) {
+      margin-right: 6rem;
+    }
+
+    @include mq(md) {
+      margin-right: 1.6rem !important;
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  &__cell-img {
+    width: 14rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 0.8rem;
+
+    @include mq(xl) {
+      width: 9rem;
+      height: 6rem;
+    }
+
+    @include mq(lg) {
+      width: 14rem;
+      height: 8rem;
+    }
+  }
+
+  &__image {
+    flex-shrink: 0;
+    width: 14rem;
+    height: 8rem;
+    margin-right: 8rem;
+
+    @include mq(xl) {
+      width: 9rem;
+    }
+
+    @include mq(lg) {
+      width: auto;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 2.4rem;
+    border-top: 1px solid var(--color-base06);
+
+    &--many {
+      align-items: stretch;
+
+      .types-table__head {
+        display: none;
+      }
+    }
+
+    .types-table {
+      .types-table__cell {
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+    }
+
+    &:nth-of-type(1) {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    &:not(.types-table__container--many) {
+      padding-bottom: 2.4rem;
+
+      .types-table__row {
+        padding-bottom: 0;
+      }
+
+      .types-table__head {
+        display: none;
+      }
+    }
+
+    &:nth-last-of-type(1) {
+      padding-bottom: 0;
+    }
+
+    @include mq(lg) {
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 100%;
+
+      .types-table__head {
+        display: flex !important;
+      }
+
+      .types-table__row-head {
+        padding-bottom: 2.4rem !important;
+
+        @include mq(sm) {
+          padding-bottom: 1.2rem !important;
+        }
+      }
+    }
+
+    @include mq(sm) {
+      width: auto;
+      max-width: none;
+      margin-right: -2.4rem;
+      padding-right: 2.4rem;
+      overflow: auto;
+      border: none;
+
+      @include noScrollbar();
+    }
+
+    &--trays {
+      .types-table .types-table__cell:nth-child(1) {
+        display: block;
+      }
+
+      &:not(.types-table__container--many) {
+        .types-table__row {
+          padding-bottom: 2.4rem;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          @include mq(sm) {
+            padding-bottom: 1.2rem;
+          }
+        }
+
+        .types-table__row-head {
+          padding-bottom: 2.4rem !important;
+
+          @include mq(sm) {
+            padding-bottom: 1.2rem !important;
+          }
+        }
+
+        .types-table__head {
+          display: block;
+        }
+      }
+
+      @include mq(lg) {
+        .types-table__max-width-wrapper {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include mq(lg) {
+    min-width: 40rem;
+    max-width: 100%;
+  }
+
+  @include mq(sm) {
+    &:not(.types-table--heading) {
+      display: block;
+    }
+  }
+
+  &--trays {
+    .types-table__cell {
+      margin-right: 4rem;
+
+      @include mq(sm) {
+        margin-right: 1.6rem;
+      }
+
+      &:nth-child(1) {
+        width: 34rem;
+        margin-right: 4.8rem;
+
+        @include mq(sm) {
+          width: 19rem;
+          margin-right: 1.6rem;
+        }
+      }
+
+      &:nth-child(2) {
+        width: 20rem;
+
+        @include mq(sm) {
+          width: 16rem;
+        }
+      }
+
+      &:nth-child(3) {
+        width: 30rem;
+
+        @include mq(sm) {
+          width: 21rem;
+        }
+      }
+    }
+
+    @include mq(lg) {
+      min-width: 62rem;
+    }
+  }
+}

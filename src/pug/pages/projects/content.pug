@@ -1,0 +1,54 @@
+section.page-section.projects-page
+  .site-content-container
+    form(action="/" class="projects-page__filter-form")
+      .projects-page__filter
+        .projects-page__filter-item
+          .custom-select-type1
+            select(name="category" class="js-custom-select-type1")
+              option(value="Категория 1" placeholder) Категория продукции
+              option(value="Категория 1") Категория 2
+              option(value="Категория 1") Категория 3
+        .projects-page__filter-item
+          .custom-select-type1
+            select(name="category" class="js-custom-select-type1")
+              option(value="Категория 1" placeholder) Отрасль
+              option(value="Категория 1") Категория 2
+              option(value="Категория 1") Категория 3
+        .projects-page__filter-item
+          .custom-select-type1
+            select(name="category" class="js-custom-select-type1")
+              option(value="Категория 1" placeholder) Год реализации
+              option(value="Категория 1") Категория 2
+              option(value="Категория 1") Категория 3
+              option(value="Категория 1") Год реализации
+              option(value="Категория 1") Категория 2
+              option(value="Категория 1") Категория 3
+              option(value="Категория 1") Год реализации
+              option(value="Категория 1") Категория 2
+              option(value="Категория 1") Категория 3
+              option(value="Категория 1") Год реализации
+              option(value="Категория 1") Категория 2
+              option(value="Категория 1") Категория 3
+
+  .site-container
+    ul.project-card__list
+      li.project-card__item(id="test")
+        article.project-card
+          header.project-card__block
+            ul.project-card__tags
+              li.project-card__tag-item
+                span.project-card__tag
+                  | Горячее водоснабжение и тепловые сети
+              li.project-card__tag-item
+                span.project-card__tag
+                  | 2020-2021
+            h3.project-card__heading
+              a.project-card__link(href="./project-detail.html")
+                | строительство водоводов систем ппд в Альметьевске
+
+          .project-card__block
+            +pictureLazy(`project-card/img1.jpg`)(class="project-card__image")
+
+    .page-btn-center
+      a.button.more-section__btn.button--outline(href="")
+        | Показать еще

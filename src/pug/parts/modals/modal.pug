@@ -1,0 +1,73 @@
+.modal__container.js-modal-legend(data-target="modal-callback")
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+      .modal__text
+        | Мы обработаем её и свяжемся с вами в ближайшее время.
+
+      form.modal__form(action="/" data-need-validation)
+        input(type="hidden" class="hidden-input" name="hidden-value")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="text" class="input" name="name" data-parsley-required data-parsley-fio placeholder="Имя")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="text" class="input js-phone-mask" name="name" data-parsley-required data-parsley-phone placeholder="+7 (900) 000 00 00")
+        button.button.modal__form-btn
+          | Отправить
+        .callback-section__form-agreement
+          | Нажимая кнопку «Отправить» вы соглашаетесь на обработку #[a(href="/") персональных данных]
+
+.modal__container.js-modal-legend(data-target="modal-vacancy")
+  .modal__content
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+        | Отправьте свое резюме
+      .modal__text
+        | Мы рассмотрим его в течении 5 рабочих дней!
+
+      form.modal__form(action="/" data-need-validation)
+        input(type="hidden" class="hidden-input" name="hidden-value")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="text" class="input" name="name" data-parsley-required data-parsley-fio placeholder="Имя")
+        label.input-label.js-validation-wrapper.modal__form-input
+          input(type="text" class="input js-phone-mask" name="name" data-parsley-required data-parsley-phone placeholder="+7 (900) 000 00 00")
+        label.input-file.modal__form-input.js-file-upload
+          input(type="file" class="visually-hidden" name="file")
+          span.input-file__text.js-file-upload-text(data-text="Прикрепить резюме") Прикрепить резюме
+          +icon-mono("clip")(class="input-file__icon" width="16" height="16")
+
+        button.button.modal__form-btn
+          | Отправить
+        .callback-section__form-agreement
+          | Нажимая кнопку «Отправить» вы соглашаетесь на обработку #[a(href="/") персональных данных]
+
+
+.modal__container.js-modal-legend(data-target="success")
+  .modal__content.modal__content-message-modal(style={"--message-color": "var(--color-secondary)"})
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+        | Заявка успешно отправлена
+      .modal__text
+        | Мы обработаем её и свяжемся с вами в ближайшее время.
+
+      button.button.modal__form-btn.modal__form-btn--top-auto
+        | Отлично
+
+
+.modal__container.js-modal-legend(data-target="error")
+  .modal__content.modal__content-message-modal(style={"--message-color": "var(--color-primary)"})
+    button.button-reset.modal__close-btn.modal-close(type="button")
+      +icon-mono("close-star")(width="40" height="40" class="modal__close-btn-icon")
+    .modal__content-inner
+      .modal__legend
+        | Не удалось отправить заявку
+      .modal__text
+        | Пожалуйста отправьте заявку еще раз.
+
+      button.button.modal__form-btn.modal__form-btn--top-auto.modal-close
+        | Отправить еще раз

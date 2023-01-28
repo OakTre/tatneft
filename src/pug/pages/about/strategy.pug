@@ -1,0 +1,40 @@
+-
+  strategy_list = [
+    { name: "Сохранить и осваивать новые рынки", descr: "Сохранить существующие и осваивать новые рынки сбыта продукции и услуг" },
+    { name: "Улучшать качество", descr: "Улучшать качество выпускаемой продукции и услуг на основе требований и ожиданий потребителей" },
+    { name: "Сохранить трудовой коллектив", descr: "Поддерживать благоприятный психологический климат, способствующий своевременному выявлению проблем и их эффективному решению" },
+    { name: "Построить эффективную систему управления", descr: "Позволяющую принимать точные, качественные и оперативные управленческие решения" },
+  ]
+
+section.page-section
+  .site-container
+    .about-strategy.js-tab-parent
+      .about-strategy__nav-list
+        button.about-strategy__nav-btn.page-tab-btn.page-tab-btn--small.is-active.js-tabs-nav(data-tab-parent="strategy")
+          | Стратегия компании
+        button.about-strategy__nav-btn.page-tab-btn.page-tab-btn--small.js-tabs-nav(data-tab-parent="directions")
+          | Основные направления
+
+      .page-tab-content.js-tabs-content.is-active(data-tab-child="strategy")
+        h2.about-strategy__heading.page-h1-heading
+          | Стратегия компании
+
+        ul.strategy-info
+          for item in strategy_list
+            li.strategy-info__item
+              .strategy-info__item-block
+                h3.strategy-info__item-heading= item.name
+              .strategy-info__item-block
+                p.strategy-info__item-text= item.descr
+
+      .page-tab-content.js-tabs-content(data-tab-child="directions")
+        h2.about-strategy__heading.page-h1-heading
+          | Основные направления
+
+        ul.strategy-info
+          for item in strategy_list
+            li.strategy-info__item
+              .strategy-info__item-block
+                h3.strategy-info__item-heading= item.name
+              .strategy-info__item-block
+                p.strategy-info__item-text= item.descr

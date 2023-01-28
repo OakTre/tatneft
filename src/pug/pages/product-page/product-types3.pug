@@ -1,0 +1,113 @@
+-
+  nav_btns = [
+    { name: "Лотки 60 мм", tag: "trays60" },
+    { name: "Лотки 80 мм", tag: "trays80" },
+    { name: "Лотки 100 мм", tag: "trays100" },
+    { name: "Лотки 150 мм", tag: "trays150" },
+    { name: "Лотки 200 мм", tag: "trays200" }
+  ]
+
+section.page-section
+  .site-container
+    .product-types.js-tab-parent
+      .product-types__nav
+        for item, index in nav_btns
+          - activeClass = index === 0 ? "is-active" : ""
+          button.page-tab-btn.page-tab-btn--small.js-tabs-nav(data-tab-parent= item.tag class=activeClass)= item.name
+
+      .custom-select.custom-select--transparent.js-custom-select.product-types__mobile-nav
+        button.custom-select__heading-select.js-custom-select-name
+          .custom-select__heading(arial-label="Открыть селект")
+            | Лотки 60 мм
+        ul.custom-select__body.js-custom-select-body
+          for item, index in nav_btns
+            - activeClass = index === 0 ? "is-active" : ""
+            li.custom-select__item
+              button.custom-select__choose.js-custom-select-choise.js-tabs-nav(class=activeClass data-tab-parent= item.tag)
+                span.custom-select__choose-label= item.name
+
+
+      .product-types__grid
+        .product-types__grid-block
+          for item, index in nav_btns
+            - activeClass = index === 0 ? "is-active" : ""
+            .product-types__content.js-tabs-content.page-tab-content(data-tab-child= item.tag class=activeClass)
+              h2.product-types__legend= item.name
+              .types-table2__wrapper
+                table.types-table2
+                  caption.visually-hidden Таблица типов
+                  thead.types-table2__head
+                    tr.types-table2__row.types-table2__row-head
+                      th.types-table2__cell Наименование
+                      th.types-table2__cell Теоретический вес, кг/шт
+                      th.types-table2__cell Габариты
+                      th.types-table2__cell Габариты 12312
+
+                      each i in Array.from(Array(10).keys())
+                        th.types-table2__cell Габариты (высота, ширина-длина), мм
+
+
+                  tbody.types-table2__body
+                    tr.types-table2__row
+                      td.types-table2__cell CТК 100х100- 3000
+                      td.types-table2__cell 6,10
+                      th.types-table2__cell Габариты
+                      th.types-table2__cell Габариты 12312
+                      each i in Array.from(Array(10).keys())
+                        td.types-table2__cell 100х100 - 3000
+                    each i in Array.from(Array(4).keys())
+                      tr.types-table2__row
+                        td.types-table2__cell Лоток кабельный CТК 100х100- 3000
+                        td.types-table2__cell 6,10
+                        th.types-table2__cell Габариты
+                        th.types-table2__cell Габариты 12312
+                        each i in Array.from(Array(10).keys())
+                          td.types-table2__cell 100х100 - 3000
+
+
+        .product-types__grid-block
+          .catalogue.product-types__catalogue
+            img(class="catalogue__img" src="assets/images/products/img0.png" alt="каталог «Композитные профили»")
+            a.catalogue__name(href="/" target="_blank")
+              | каталог «Композитные профили»
+
+            span.catalogue__file-size.catalogue__file-size--pdf
+              | pdf, 5mb
+
+          button.button.button--outline.product-types__order-btn
+            | Заказать консультацию
+
+
+section.page-section
+  .site-container
+    .product-types
+      .product-types__grid
+        .product-types__grid-block
+          .product-types__content
+            h2.product-types__legend.product-types__legend--mobile-visible Лотки 100 мм
+            .types-table__max-width-wrapper
+              .types-table__container.types-table__container--trays
+                table.types-table.types-table--trays
+                  caption.visually-hidden Таблица типов
+                  thead.types-table__head
+                    tr.types-table__row.types-table__row-head
+                      th.types-table__cell Наименование
+                      th.types-table__cell Теоретический вес, кг/шт
+                      th.types-table__cell Габариты (высота, ширина-длина), мм
+                  tbody.types-table__body
+                    each i in Array.from(Array(4).keys())
+                      tr.types-table__row
+                        td.types-table__cell Лоток кабельный CТК 100х100- 3000
+                        td.types-table__cell 6,10
+                        td.types-table__cell 100х100 - 3000
+        .product-types__grid-block
+          .catalogue.product-types__catalogue
+            img(class="catalogue__img" src="assets/images/products/img0.png" alt="каталог «Композитные профили»")
+            a.catalogue__name(href="/" target="_blank")
+              | каталог «Композитные профили»
+
+            span.catalogue__file-size.catalogue__file-size--pdf
+              | pdf, 5mb
+
+          button.button.button--outline.product-types__order-btn
+            | Заказать консультацию

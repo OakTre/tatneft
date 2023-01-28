@@ -1,0 +1,51 @@
+-
+  edv_list1 = [
+    { name: "Устойчивость к воздействию коррозии", text: "не требуется покраска"},
+    { name: "Устойчивость к воздействию агрессивно химической среды", text: "группа горючести по ГОСТ 30244, Г1-Г2"},
+    { name: "Долговечность материала – до 50 лет", text: "не требуются сварочные работы, грузоподъемная техника" },
+    { name: "Соответствие всем требованиям промышленной безопасности",  text: "" },
+    { name: "Соответствие всем требованиям промышленной безопасности",  text: "" },
+    { name: "Соответствие всем требованиям промышленной безопасности",  text: "" },
+    { name: "Соответствие всем требованиям промышленной безопасности",  text: "" },
+    { name: "Соответствие всем требованиям промышленной безопасности",  text: "" },
+  ]
+
+section.category-intro.page-section.js-advantages-swiper-full-parent
+  .site-content-container
+    .category-intro__grid
+      .category-intro__block
+        h1.page-hero-heading.category-intro__heading
+          | Композитные профили
+      .category-intro__block
+        .page-read-more-container
+          .category-intro__text-container.page-read-more-inner
+            p
+              | Композитные профили и изделия из них применяются
+              | на территориях с химически агрессивной средой, а
+              | также там, где целесообразно заменить металл на
+              | более экономичный и легкий материал,  с высокими
+              | механическими и теплофизическими характеристиками.
+            p
+              | Материал применяется  в строительной сфере, дорожном
+              | строительстве, благоустройстве, нефтехимической, в автомобилестроении.
+              | С помощью композитных профилей быстро собираются складские конструкции,
+              | каркасы и прочие конструкции.
+
+          button.category-intro__read-more-btn.page-read-more.js-page-read-more
+            | Читать полностью
+    .advantages-container
+      .advantages-container__block
+        .page-swiper-nav
+          +nav-btn("page-circle-btn--outline js-slider-btn-prev")
+          +nav-btn("page-circle-btn--outline js-slider-btn-next")
+
+      .advantages-container__block
+        .swiper.js-advantages-swiper-full
+          ul.advantages__list.advantages__list--slider.swiper-wrapper
+            for item in edv_list1
+              li.advantages__item.swiper-slide
+                .advantage
+                  p.advantage__text= item.name
+                  if item.text
+                    p.advantage__text-small= item.text
+          .page-swiper-pagination

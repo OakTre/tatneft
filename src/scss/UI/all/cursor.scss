@@ -1,0 +1,43 @@
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9.6rem;
+  height: 9.6rem;
+  background-color: var(--color-base09-alfa80);
+  border-radius: 50%;
+  transform: translate(var(--x), var(--y));
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+
+  &:active {
+    background-color: transparent;
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    width: 4.8rem;
+    height: 2.4rem;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--color-base01);
+
+    &:nth-child(2) {
+      transform: scale(-1, 1);
+    }
+  }
+
+  @include mq(lg) {
+    display: none;
+  }
+}

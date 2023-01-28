@@ -1,0 +1,96 @@
+.about-feautures {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  gap: var(--grid-offset);
+
+  @include mq(lg) {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.8rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    grid-column: 8 span;
+    align-items: flex-start;
+    min-height: 30rem;
+    padding: 4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid var(--color-base06);
+    border-radius: 1.6rem;
+
+    &-img {
+      width: 4.8rem;
+      height: 4.8rem;
+      margin-bottom: 4.7rem;
+      object-fit: contain;
+
+      @include mq(sm) {
+        display: none;
+      }
+    }
+
+    &-heading {
+      margin-bottom: 2.4rem;
+      color: var(--color-base01);
+      font: var(--font-numbers-3);
+
+      @include mq(sm) {
+        font: 200 4rem/90% var(--second-ff);
+      }
+    }
+
+    &-text {
+      display: block;
+      max-width: 38.8rem;
+      color: var(--color-base04);
+      font: var(--font-once-2);
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+
+      @include mq(sm) {
+        margin-top: auto;
+      }
+    }
+
+    &-legend {
+      max-width: 44.1rem;
+      color: var(--color-base01);
+      font: var(--font-heading-4);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      &-small {
+        max-width: 44.4rem;
+        margin-top: auto;
+        color: var(--color-base01);
+        font: var(--font-text-t1-light-ln125);
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: 12 span;
+
+      @include mq(lg) {
+        grid-column: 6 span;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-column: 12 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 6 span;
+    }
+
+    @include mq(sm) {
+      min-height: 18rem;
+      padding: 1.6rem;
+      background-position: 50% 10%;
+      background-size: 70rem 60rem;
+    }
+  }
+}

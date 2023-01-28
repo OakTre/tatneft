@@ -1,0 +1,39 @@
+-
+  proj_list1 = [
+    {
+      name: "Поставка стеклопластиковых труб для дальневосточного федерального округа",
+      img: "img1",
+      link: "./project-detail.html",
+      tags: ["Нефтегазовая промышленность", "2019"]
+    },
+    {
+      name: "поставка и Монжат кабельных эстакад на производстве АО «ТАНЕКО»",
+      img: "img1",
+      link: "./project-detail.html",
+      tags: ["Химическая промышленность", "2018-2019"]
+    },
+  ]
+
+section.page-section.more-section
+  .site-content-container
+    h2.page-h1-heading.more-section__heding
+      | Другие проекты
+  .site-container
+    ul.more-section__container
+      for item in proj_list1
+        li.more-section__item
+          article.project-card.project-card--small-img
+            header.project-card__block
+              ul.project-card__tags
+                for tag in item.tags
+                  li.project-card__tag-item
+                    span.project-card__tag= tag
+              h3.project-card__heading
+                a.project-card__link(href="./project-detail.html")= item.name
+
+            .project-card__block
+              img(class="project-card__image lazyload" src="assets/images/placeholder.png" data-src=`assets/images/project-card/img1.jpg` alt= item.name)
+
+    .page-btn-center
+      a.button.more-section__btn.button--outline(href="")
+        | Смотреть все

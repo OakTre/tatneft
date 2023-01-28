@@ -1,0 +1,31 @@
+-
+  edv_list = [
+    "Устойчивость к воздействию коррозии",
+    "Устойчивость к воздействию агрессивно химической среды",
+    "Долговечность материала – до 50 лет",
+    "Легкий вес и Высокая прочность"
+  ]
+
+section.category-intro.page-section.page-top-offset
+  .site-content-container
+    .category-intro__grid
+      .category-intro__block
+        h1.page-hero-heading.category-intro__heading
+          | Более 2000 номенклатур продукции
+      .category-intro__block
+        .category-intro__text-container
+          p
+            | Выпускаемая предприятием продукция используется «Группой компаний Татнефть»
+            | при обустройстве месторождений нефти, строительстве нефтеперерабатывающего
+            | завода АО «ТАНЕКО», и прочих объектах строительства и капитального ремонта,
+            | а также другими компаниями по всей России и СНГ: нефте- газодобывающих
+            | предприятиях, на химических производствах, в горнодобывающей промышленности
+            | и прочих сферах и отраслях.
+
+    .advantages__slider.swiper.js-advantages-swiper
+      ul.advantages__list.swiper-wrapper
+        for item in edv_list
+          li.advantages__item.swiper-slide
+            .advantage
+              p.advantage__text= item
+      .page-swiper-pagination

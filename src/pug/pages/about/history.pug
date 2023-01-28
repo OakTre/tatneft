@@ -1,0 +1,31 @@
+section.page-section.about-history
+  .site-container
+    .hr
+  .site-content-container
+    .about-history__wrapper
+      .about-history__wrapper-block
+        span.about-history__subtitle
+          | История компании
+      .about-history__wrapper-block
+        .swiper.about-history__text-swiper.js-about-history-swiper
+          ul.about-history__text-swiper-list.swiper-wrapper
+            each i in Array.from(Array(5).keys())
+              li.about-history__text-swiper-item.swiper-slide
+                span.about-history__text-swiper-item-title
+                  | Руководство Республики Татарстан
+                  | поставило стратегическую задачу#{i}
+                p.about-history__text-swiper-item-text
+                  | Руководство Республики Татарстан, придавая большое значение увеличению глубине
+                  | переработки имеющегося в регионе сырья и увеличению добавочной стоимости
+                  | производимой в регионе продукции, поставило перед ПАО «Татнефть» стратегическую
+                  | задачу по внедрению высоких технологий производства композиционных материалов на
+                  | территории Свободной Экономической Зоны «Алабуга».
+    .about-history__date-swiper.js-about-history-swiper-2
+      ul.about-history__date-swiper-list.swiper-wrapper
+        each i in Array.from(Array(5).keys())
+          li.about-history__date-swiper-item.swiper-slide
+            span.about-history__date-swiper-item-title
+              | 201#{i}
+      .page-swiper-nav.about-history__date-swiper-btns
+        +nav-btn("page-circle-btn--outline js-slider-btn-prev")(class="about-history__date-swiper-btn about-history__date-swiper-btn-prev")
+        +nav-btn("page-circle-btn--outline js-slider-btn-next")(class="about-history__date-swiper-btn about-history__date-swiper-btn-next")

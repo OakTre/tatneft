@@ -1,0 +1,25 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    margin-right: 2.4rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: var(--color-base01);
+    font: var(--font-common-b2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    &:hover {
+      color: var(--color-base04);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.product-page-docs {
+  &__heading {
+    margin-bottom: 6.4rem;
+    text-align: center;
+
+    @include mq(md) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding: 4.8rem 16.8rem;
+    background-color: var(--color-base07);
+    border-radius: 1.6rem;
+
+    @include mq(lg) {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  &__nav-btns {
+    position: absolute;
+    top: 50%;
+    left: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - (4.8rem *2));
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    pointer-events: all;
+  }
+
+  &__pagination {
+    display: none;
+
+    @include mq(lg) {
+      display: flex;
+    }
+  }
+}

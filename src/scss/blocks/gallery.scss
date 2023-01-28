@@ -1,0 +1,52 @@
+.gallery-container {
+  position: relative;
+
+  &:hover {
+    cursor: none;
+
+    .cursor {
+      opacity: 1;
+    }
+  }
+}
+
+.gallery {
+  position: relative;
+  width: auto;
+  margin: 0 calc(-1 * var(--content-padding));
+  padding: 0 var(--content-padding);
+  overflow: visible;
+
+  &__item {
+    width: 90.3rem;
+    margin-right: 1.6rem;
+
+    &-img {
+      width: 100%;
+      height: 48rem;
+      object-fit: cover;
+      border-radius: 1.6rem;
+
+      @include mq(xl) {
+        height: 40rem;
+      }
+
+      @include mq(md) {
+        height: 31rem;
+      }
+
+      @include mq(sm) {
+        height: 20rem;
+        border-radius: 1.2rem;
+      }
+    }
+  }
+
+  &__pagination {
+    display: none;
+
+    @include mq(sm) {
+      display: flex;
+    }
+  }
+}

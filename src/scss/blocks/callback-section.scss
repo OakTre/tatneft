@@ -1,0 +1,240 @@
+/* stylelint-disable selector-class-pattern */
+.callback-section {
+  position: relative;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    gap: var(--grid-offset);
+    border-top: 1px solid var(--color-base01-alfa05);
+    border-bottom: 1px solid var(--color-base01-alfa05);
+
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    grid-column: 12 span;
+    align-items: flex-start;
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
+
+    &:nth-child(1) {
+      grid-column: 11 span;
+      padding-left: 4.8rem;
+    }
+
+    &:nth-child(2) {
+      display: flex;
+      grid-column: 2 span;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      .vertical-line {
+        width: 1px;
+        height: 100%;
+        background-color: var(--color-base01-alfa05);
+      }
+    }
+
+    &:nth-child(3) {
+      grid-column: 11 span;
+    }
+
+    @include mq(lg) {
+      grid-column: 12 span;
+
+      &:nth-child(1) {
+        padding: 0;
+
+        .callback-section__legend,
+        .callback-section__caption {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        padding-left: 0;
+      }
+    }
+
+    @include mq(sm) {
+      align-items: stretch;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__legend {
+    color: var(--color-base01);
+    font: var(--font-over-elight);
+    text-transform: uppercase;
+
+    &--mb {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__caption {
+    max-width: 23rem;
+    margin-top: auto;
+    color: var(--color-base04);
+    font: var(--font-text-t3-light-ln125);
+    letter-spacing: 0.03em;
+  }
+
+  &__heading {
+    max-width: 67.7rem;
+    margin-bottom: 12rem;
+    color: var(--color-base01);
+    font: var(--font-hero);
+    font-variation-settings: var(--font-variant);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    @include mq(lg) {
+      max-width: calc(100% - 40rem);
+    }
+
+    @include mq(sm) {
+      max-width: calc(100% - 9rem);
+      margin-bottom: 3.4rem;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__email-text {
+    max-width: 36.8rem;
+    margin-bottom: 4rem;
+    color: var(--color-base01);
+  }
+
+  &__form {
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+
+      &-input {
+        &--full {
+          grid-column: 2 span;
+        }
+
+        @include mq(sm) {
+          margin-bottom: 0.8rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-btn {
+        margin-bottom: 3.2rem;
+
+        @include mq(sm) {
+          justify-content: center;
+          width: 100%;
+        }
+      }
+
+      @include mq(sm) {
+        display: block;
+      }
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3.2rem;
+
+      @include mq(sm) {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &-input {
+      width: 20rem;
+      margin-right: 0.8rem;
+
+      &--big {
+        width: 34rem;
+      }
+
+      @include mq(sm) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &-agreement {
+      max-width: 35rem;
+      color: var(--color-base04);
+      font: var(--font-note);
+
+      a {
+        &:hover {
+          color: var(--color-base01);
+        }
+      }
+
+      @include mq(sm) {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__page-logo-animated {
+    position: absolute;
+    top: 4.3rem;
+    right: 10%;
+    width: 35.6rem;
+    height: 35.6rem;
+
+    &._mobile {
+      display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    @include mq(custom, max, 1560) {
+      right: 0;
+    }
+
+    @include mq(lg) {
+      right: 0;
+    }
+
+    @include mq(md) {
+      width: 30rem;
+      height: 30rem;
+    }
+
+    @include mq(sm) {
+      top: 4rem;
+      width: 8.8rem;
+      height: 8.8rem;
+    }
+  }
+}

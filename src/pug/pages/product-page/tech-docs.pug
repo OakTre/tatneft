@@ -1,0 +1,20 @@
+section.page-section.product-page-docs.js-docs-swiper-parent
+  .site-container
+    h2.product-page-docs__heading.page-h1-heading
+      | Техническая документация
+    .product-page-docs__container
+      .product-page-docs__nav-btns
+        +nav-btn("page-circle-btn--outline js-slider-btn-prev product-page-docs__btn")
+        +nav-btn("page-circle-btn--outline js-slider-btn-next product-page-docs__btn")
+      .swiper.product-page-docs__slider.js-docs-swiper
+        ul.swiper-wrapper
+          each i in Array.from(Array(5).keys())
+            li.swiper-slide
+              .doc-file
+                .doc-file__image-wrapper
+                  +pictureLazy(`docs/img1.jpg`)
+                  span.doc-file__size
+                    | pdf, 5mb
+                a.doc-file__name(href="/" target="_blank")
+                  | Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013
+        .page-swiper-pagination.product-page-docs__pagination

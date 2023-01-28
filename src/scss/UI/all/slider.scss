@@ -1,0 +1,34 @@
+.slider {
+  margin: 5.6rem 0;
+
+  &-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      display: block;
+      margin-top: 1.2rem;
+      font: var(--font-text-t3-reg);
+      font-style: italic;
+      content: attr(data-text);
+    }
+  }
+
+  @include mq(sm) {
+    margin: 3.2rem 0;
+    overflow: visible;
+  }
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 6.4rem;
+  left: 3.2rem;
+  z-index: 20;
+
+  @include mq(sm) {
+    display: none;
+  }
+}

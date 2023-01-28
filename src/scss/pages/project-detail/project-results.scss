@@ -1,0 +1,13 @@
+.project-results {
+  &__heading {
+    margin-bottom: 6.4rem;
+    padding-top: 14rem;
+    border-top: 1px solid var(--color-base06);
+
+    @include mq(sm) {
+      margin-bottom: 3.2rem;
+      padding-top: 0;
+      border: none;
+    }
+  }
+}

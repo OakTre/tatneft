@@ -1,0 +1,12 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home"
+  - const pageTitle = "Новость детальная"
+  - const siteLang = "ru"
+  - callBacSubkHeading = "Подписывайтесь"
+  - callBackHeading = "на полезную рассылку"
+  - callBackEmail = true
+
+block content
+  include pages/media-deatail/main.pug
